@@ -1,1 +1,86 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+h1 {
+    font-size: rem(24);
+    line-height: rem(32);
+    font-weight: $fw-medium;
+
+    @include tablet {
+        font-size: rem(20);
+        line-height: rem(28);
+    }
+}
+
+h2 {
+    font-size: rem(24);
+    line-height: rem(32);
+    font-weight: $fw-light;
+
+    @include tablet {
+        font-size: rem(18);
+        line-height: rem(24);
+    }
+}
+
+h3 {
+    font-size: rem(17);
+    line-height: rem(24);
+
+    @include tablet {
+        font-size: rem(16);
+        line-height: rem(24);
+    }
+}
+
+h4 {
+    font-size: rem(15);
+    line-height: rem(24);
+    font-weight: $fw-medium;
+
+    @include tablet {
+        font-size: rem(14);
+        line-height: rem(20);
+    }
+}
+
+
+.page {
+    width: 100%;
+    display: flex;
+    column-gap: rem(24);
+
+    .left {
+        flex: 0 1 rem(264)
+    }
+
+    .content {
+        flex: 0 1 rem(552)
+    }
+
+    .right {
+        flex: 0 1 rem(264)
+    }
+
+
+    @include tablet {
+      
+
+        .right {
+            display: none;
+        }
+    }
+
+    @include mobile {
+       
+        .content {
+            width: 100%;
+        }
+
+        .left {
+            display: none;
+        }
+
+
+    }
+}
+

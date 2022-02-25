@@ -16,23 +16,38 @@ a:focus,
 a:active {
 	// outline: none;
 }
-html,
-body {
+
+html {
 	height: 100%;
-	min-width: $minWidth + px;
-}
-body {
-	color: $mainColor;
-	line-height: 1;
-	font-family: $fontFamily;
-	font-size: $fontSize;
-	//text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: none;
+  
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+body {
+	min-width: $minWidth + px;
+	height: 100%;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	line-height: rem(24);
+	font-weight: $fw-medium;
+	color: $primary;
+}
+
 input,
 button,
 textarea {

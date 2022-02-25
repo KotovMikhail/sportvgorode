@@ -1,3 +1,26 @@
+
+
+
+
+@mixin tablet {
+	@media (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: $mobile) {
+		@content;
+	}
+}
+
+@mixin mobileSmall {
+	@media (max-width: $mobileSmall) {
+		@content;
+	}
+}
+
+
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
