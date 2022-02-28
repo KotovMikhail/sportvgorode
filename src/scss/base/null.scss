@@ -1,3 +1,6 @@
+@import "../fonts/fonts";
+
+
 * {
 	padding: 0px;
 	margin: 0px;
@@ -46,6 +49,7 @@ body {
 	line-height: rem(24);
 	font-weight: $fw-medium;
 	color: $primary;
+	background-color: $bgColor;
 }
 
 input,

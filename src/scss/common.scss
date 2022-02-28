@@ -43,27 +43,37 @@ h4 {
     }
 }
 
-
 .page {
     width: 100%;
     display: flex;
     column-gap: rem(24);
 
     .left {
-        flex: 0 1 rem(264)
+        flex: 0 1 rem(264);
     }
 
     .content {
-        flex: 0 1 rem(552)
+        flex: 0 1 rem(552);
+        padding: rem(32) rem(40);
+        background-color: $whiteColor;
+        border-radius: $borderRadius;
     }
 
     .right {
-        flex: 0 1 rem(264)
+        flex: 0 1 rem(264);
+        padding: rem(24);
+        background-color: $whiteColor;
+        border-radius: $borderRadius;
     }
 
-
     @include tablet {
-      
+        .left {
+            flex: 0 1 rem(216);
+        }
+
+        .content {
+            flex: 1 1 auto;
+        }
 
         .right {
             display: none;
@@ -71,16 +81,63 @@ h4 {
     }
 
     @include mobile {
-       
+        flex: none;
+
         .content {
+            padding: rem(24) rem(32);
+            flex: none;
             width: 100%;
         }
 
         .left {
             display: none;
         }
-
-
     }
 }
 
+.nav {
+    padding: rem(24);
+    background-color: $whiteColor;
+    border-radius: $borderRadius;
+
+    &__wrap {
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__heading {
+        margin-bottom: rem(16);
+        padding: rem(8) rem(16);
+        background-color: $primaryLightest3;
+        border-radius: rem(4);
+        font-size: rem(15);
+        line-height: rem(24);
+        color: $primaryLight;
+    }
+
+    &__list {
+        padding: rem(0) rem(16); 
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: rem(10);
+        color: $primaryLighter;        
+        font-weight: 400;
+        transition: color .2s;
+        cursor: pointer;
+
+        &:hover, &:active, &:focus {
+            color: $primary;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
