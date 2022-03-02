@@ -1,6 +1,6 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-h1 {
+h1, .h1 {
     font-size: rem(24);
     line-height: rem(32);
     font-weight: $fw-medium;
@@ -11,7 +11,7 @@ h1 {
     }
 }
 
-h2 {
+h2, .h2 {
     font-size: rem(24);
     line-height: rem(32);
     font-weight: $fw-light;
@@ -22,7 +22,7 @@ h2 {
     }
 }
 
-h3 {
+h3, .h3 {
     font-size: rem(17);
     line-height: rem(24);
 
@@ -32,7 +32,7 @@ h3 {
     }
 }
 
-h4 {
+h4, .h4 {
     font-size: rem(15);
     line-height: rem(24);
     font-weight: $fw-medium;
@@ -138,6 +138,174 @@ h4 {
 
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+
+    &__btn {
+        width: 100%;
+        min-height: rem(48);
+    }
+}
+
+
+// Кнопки
+
+.btn {
+    border-radius: 4px;
+    font-size: rem(15);
+    line-height: rem(24);
+    font-weight: 400;
+    transition: background-color .2s, color .2s, border-color .2s;
+
+    &_grey {
+        border: 1px solid $primaryLightest2;
+        background-color: $primaryLightest;
+    }
+
+    &_blue {
+        color: $whiteColor;
+        background-color: $blueLighter;
+
+        &:hover {
+            background-color: $blueLightest;
+        }
+
+        &:active {
+            background-color: $blueLight;
+        }
+
+        &:focus {
+            outline: 1px dashed $primaryLighter;
+        }        
+    }
+
+    &_green {
+        color: $whiteColor;
+        background-color: $greenLight;
+
+        &:hover {
+            background-color: $greenLighter;
+        }
+
+        &:active {
+            background-color: $green;
+        }
+
+        &:focus {
+            outline: 1px dashed $blueLightest;
+        }        
+    }
+
+    &_disabled {
+        background-color: $primaryLightest3;
+    }
+}
+
+.append {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        margin-bottom: rem(8);
+    }
+
+    &__descr {
+
+    }
+}
+
+// Avatar-add-btn
+
+.avatar-add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(14);
+    width: rem(120);
+    height: rem(120); 
+    border: 1px solid $blueLightest1;
+    background-color: $blueLightest1;
+    border-radius: rem(20);
+    outline: none; 
+    transition: background-color 0.2s, border-color 0.2s;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-size: rem(13);
+        line-height: rem(18);
+        font-weight: 500;
+        text-align: center;
+        color: $whiteColor;
+        border-radius: 50%;              
+        z-index: 0;      
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url("@img/icons/avatar-empty.svg") no-repeat center;
+            z-index: -1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: transparentize($blueLighter, 0.5);
+            border-radius: 50%;    
+            z-index: -2;
+            transition: background-color 0.2s;
+        }
+    }
+
+    &:hover {        
+        border: 1px solid transparent;
+        background-color: transparentize($blueLighter, 0.7);
+
+        .avatar-add-btn__text {
+            &::after {
+                background-color: transparentize($blueLighter, 0.2);
+            }           
+        }
+    }
+
+    &:active {
+        outline: none;
+        border: 1px solid transparent;
+        background-color: transparentize($blueLighter, 0.5);
+
+        .avatar-add-btn__text {
+            &::after {
+                background-color: transparentize($blueLighter, 0.2);
+            }           
+        }
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid transparentize($blueLighter, 0.5);
+        background-color: transparentize($blueLighter, 0.7);
+
+        .avatar-add-btn__text {
+            &::after {
+                background-color: transparentize($blueLighter, 0.2);
+            }           
         }
     }
 }
