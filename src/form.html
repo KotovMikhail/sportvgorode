@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Форма"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page __container">
+
+            <div class="left">
+                <nav class="nav">
+                    <div class="nav__wrap">
+                        <h3 class="nav__heading">Моя страница</h3>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <div class="nav__title-wrap">
+                                    <span class="nav__title">Избранное</span>
+                                    <span class="nav__item-counter">5</span>
+                                </div>
+                                <ul class="sub-nav__list">
+                                    <li class="sub-nav__item"><span class="sub-nav__item-text">Арены</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+                                    <li class="sub-nav__item"><span class="sub-nav__item-text">Спортшколы</span><span class="nav__item-counter sub-nav__item-counter">1</span></li>
+                                    <li class="sub-nav__item"><span class="sub-nav__item-text">Команды</span><span class="nav__item-counter sub-nav__item-counter">2</span></li>
+                                    <li class="sub-nav__item"><span class="sub-nav__item-text">Тренировки</span><span class="nav__item-counter sub-nav__item-counter">3</span></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav__item">
+                                <div class="nav__title-wrap">
+                                    <span class="nav__title">Мой профиль</span>
+                                    <span class="nav__item-counter sub-nav__item-counter">1</span>
+                                </div>
+                                <ul class="sub-nav__list">
+                                    <li class="sub-nav__item">
+                                        <span class="sub-nav__item-text">Уведомления</span><span class="nav__item-counter sub-nav__item-counter">1</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav__wrap">
+                        <h3 class="nav__heading">Управление</h3>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <div class="nav__title-wrap">
+                                    <span class="nav__title">Арены</span>
+                                    <span class="nav__item-counter">5</span>
+                                </div>
+                                <ul class="sub-nav__list">
+                                    <li class="sub-nav__item"><span class="sub-nav__item-text">ЛД Морозово</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <div class="nav__title-wrap">
+                                    <span class="nav__title">Спортшколы</span>
+                                    <span class="nav__item-counter">5</span>
+                                </div>
+                                <ul class="sub-nav__list">
+                                    <li class="sub-nav__item"><span class="sub-nav__item-text">Hockey Chance</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <div class="nav__title-wrap">
+                                    <span class="nav__title">Команды</span>
+                                    <span class="nav__item-counter">5</span>
+                                </div>
+                                <ul class="sub-nav__list">
+                                    <li class="sub-nav__item"><span class="sub-nav__item-text">ХК Харламов</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <button class="btn btn_blue nav__btn" type="button">Добавить</button>
+                </nav>
+            </div>
+
+            <div class="content">
+                <div class="content__inner">
+                    <div class="append">
+                        <div class="append__main">
+                            <h1 class="h1 append__title">Добавить</h1>
+                            <p class="h2 append__descr">Спортивную арену</p>
+                        </div>
+                        <div class="append__img">
+                            <button class="avatar-add-btn append__avatar" type="button">
+                                <span class="avatar-add-btn__text">Загрузить логотип</span>
+                            </button>
+                            <!-- <img src="@img/Avatar.png" alt="">
+                            Не совсем ясно, как будет работать установка аватара
+                            Если что, то переделаю, как надо -->
+                        </div>
+                    </div>
+
+                    <form action="#" class="form content__form" method="POST">
+                        <div class="add-team">
+                            <p class="add-heading add-team__heading">Выберите тип</p>
+
+                            <div class="form__item">
+                                <label class="select add-team__select" for="select">
+                                    <select id="select" class="error">
+                                        <option value="" disabled="disabled" selected="selected">Спортивный комплекс</option>
+                                        <option value="apples">Apples</option>
+                                        <option value="bananas">Bananas</option>
+                                        <option value="grapes">Grapes</option>
+                                        <option value="oranges">Oranges</option>
+                                    </select>
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </label>
+                                <div class="error-text">Укажите тип площадки</div>    
+                            </div>
+
+                         
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+            </div>
+
+            <div class="right">
+                Правый
+            </div>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

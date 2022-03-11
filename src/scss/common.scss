@@ -1,43 +1,47 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-h1, .h1 {
+h1,
+.h1 {
     font-size: rem(24);
     line-height: rem(32);
     font-weight: $fw-medium;
 
-    @include tablet {
+    @include mobileSmall {
         font-size: rem(20);
         line-height: rem(28);
     }
 }
 
-h2, .h2 {
+h2,
+.h2 {
     font-size: rem(24);
     line-height: rem(32);
     font-weight: $fw-light;
 
-    @include tablet {
+    @include mobileSmall {
         font-size: rem(18);
         line-height: rem(24);
     }
 }
 
-h3, .h3 {
+h3,
+.h3 {
     font-size: rem(17);
     line-height: rem(24);
 
-    @include tablet {
+    @include mobileSmall {
         font-size: rem(16);
         line-height: rem(24);
     }
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: rem(15);
     line-height: rem(24);
     font-weight: $fw-medium;
 
-    @include tablet {
+    @include mobileSmall {
         font-size: rem(14);
         line-height: rem(20);
     }
@@ -84,7 +88,7 @@ h4, .h4 {
         flex: none;
 
         .content {
-            padding: rem(24) rem(32);
+            padding: rem(24);
             flex: none;
             width: 100%;
         }
@@ -101,10 +105,10 @@ h4, .h4 {
     border-radius: $borderRadius;
 
     &__wrap {
-        margin-bottom: 32px;
+        margin-top: rem(32);
 
-        &:last-child {
-            margin-bottom: 0;
+        &:first-child {
+            margin-top: 0;
         }
     }
 
@@ -119,44 +123,115 @@ h4, .h4 {
     }
 
     &__list {
-        padding: rem(0) rem(16); 
+        padding: rem(0) rem(16);
     }
 
     &__item {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
         margin-bottom: rem(10);
-        color: $primaryLighter;        
-        font-weight: 400;
-        transition: color .2s;
-        cursor: pointer;
-
-        &:hover, &:active, &:focus {
-            color: $primary;
-        }
+        color: $primaryLighter;
 
         &:last-child {
             margin-bottom: 0;
         }
     }
 
+    &__item-counter {
+        font-size: rem(15);
+        line-height: rem(24);
+        font-weight: 400;
+        color: $primaryLighter;
+    }
+
+    &__title-wrap {
+        margin-bottom: rem(10);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .nav__item-counter {
+            color: $primary
+        }
+    }
+
+    &__title {
+        color: $primary;
+        font-size: rem(15);
+        line-height: rem(24);
+        font-weight: 400;
+    }
 
     &__btn {
+        margin-top: rem(32);
         width: 100%;
         min-height: rem(48);
     }
 }
 
+.sub-nav {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    &__item {
+        margin-bottom: rem(10);
+        padding-left: rem(16);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: rem(15);
+        line-height: rem(24);
+        font-weight: 400;
+        transition: color 0.2s;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: rem(6);
+            top: 50%;
+            transform: translateY(-50%);
+            width: rem(3);
+            height: rem(3);
+            background-color: $primaryLighter;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $greenLight;
+
+            &::before {
+                background-color: $greenLight;
+            }
+        }
+    }
+}
 
 // Кнопки
 
 .btn {
-    border-radius: 4px;
+    border-radius: rem(4);
     font-size: rem(15);
     line-height: rem(24);
     font-weight: 400;
-    transition: background-color .2s, color .2s, border-color .2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
     &_grey {
         border: 1px solid $primaryLightest2;
@@ -177,7 +252,7 @@ h4, .h4 {
 
         &:focus {
             outline: 1px dashed $primaryLighter;
-        }        
+        }
     }
 
     &_green {
@@ -194,7 +269,7 @@ h4, .h4 {
 
         &:focus {
             outline: 1px dashed $blueLightest;
-        }        
+        }
     }
 
     &_disabled {
@@ -210,8 +285,10 @@ h4, .h4 {
         margin-bottom: rem(8);
     }
 
-    &__descr {
-
+    @include mobileSmall {
+        &__title {
+            margin-bottom: rem(4);
+        }
     }
 }
 
@@ -221,14 +298,24 @@ h4, .h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: rem(14);
     width: rem(120);
-    height: rem(120); 
+    height: rem(120);
     border: 1px solid $blueLightest1;
     background-color: $blueLightest1;
     border-radius: rem(20);
-    outline: none; 
+    outline: none;
     transition: background-color 0.2s, border-color 0.2s;
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
 
     &__text {
         display: flex;
@@ -242,11 +329,11 @@ h4, .h4 {
         font-weight: 500;
         text-align: center;
         color: $whiteColor;
-        border-radius: 50%;              
-        z-index: 0;      
+        border-radius: 50%;
+        z-index: 0;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
@@ -254,12 +341,16 @@ h4, .h4 {
             right: 0;
             bottom: 0;
             left: 0;
+            margin: auto;
+            width: rem(90);
+            height: rem(90);
             background: url("@img/icons/avatar-empty.svg") no-repeat center;
+            background-size: cover;
             z-index: -1;
         }
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
@@ -267,21 +358,25 @@ h4, .h4 {
             right: 0;
             bottom: 0;
             left: 0;
+            margin: auto;
+            width: rem(90);
+            height: rem(90);
             background-color: transparentize($blueLighter, 0.5);
-            border-radius: 50%;    
+            background-size: cover;
+            border-radius: 50%;
             z-index: -2;
             transition: background-color 0.2s;
         }
     }
 
-    &:hover {        
+    &:hover {
         border: 1px solid transparent;
         background-color: transparentize($blueLighter, 0.7);
 
         .avatar-add-btn__text {
             &::after {
                 background-color: transparentize($blueLighter, 0.2);
-            }           
+            }
         }
     }
 
@@ -293,7 +388,7 @@ h4, .h4 {
         .avatar-add-btn__text {
             &::after {
                 background-color: transparentize($blueLighter, 0.2);
-            }           
+            }
         }
     }
 
@@ -305,7 +400,144 @@ h4, .h4 {
         .avatar-add-btn__text {
             &::after {
                 background-color: transparentize($blueLighter, 0.2);
-            }           
+            }
         }
     }
+
+    @include mobileSmall {
+        width: rem(80);
+        height: rem(80);
+
+        &__text {
+            font-size: rem(9);
+            line-height: rem(12);
+            font-weight: 400;
+
+            &::before, &::after {
+                width: rem(62);
+                height: rem(62);
+            }
+        }
+    }
+}
+
+
+.form {
+
+    &__item {
+        margin-bottom: rem(24);
+    }
+}
+
+// Select
+
+.add-heading {
+    margin-bottom: rem(4);
+    padding-left: rem(9);
+    font-size: rem(13);
+    line-height: rem(24);
+    font-weight: 400;
+    color: $primaryLighter;
+}
+
+.add-team {
+    &__select {
+        width: 100%;
+    }
+}
+
+.select {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    select {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: rem(8);
+        display: block;
+        font-size: rem(15);
+        line-height: rem(24);
+        font-weight: 400;
+        appearance: none;
+        border-radius: rem(4);
+        border: 1px solid $primaryLightest2;
+        color: $primaryLight;
+        background-color: #fff;
+        transition: border-color 0.2s;
+        cursor: pointer;
+
+        &.error {
+            border-color: $redLightest;
+        }
+
+       & option[value=""][disabled] {
+            display: none;
+        }
+
+        & + svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(0);
+            right: rem(8);
+            width: rem(14);
+            height: rem(8);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            pointer-events: none;
+            transition: transform 0.2s;
+        }
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:hover {
+            border-color: $primary;
+            color: $primaryLight;
+
+            & + svg {
+                transform: translateY(-50%) rotate(-90deg);
+
+                path {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    @include mobileSmall {
+        select {
+            font-size: rem(14);
+            line-height: rem(20);
+
+            & + svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(0);
+                right: rem(8);
+                width: rem(12);
+                height: rem(8);
+
+            }
+        }
+    }
+}
+
+
+
+.error-text {
+    display: none;
+    margin-top: rem(3);
+    font-size: rem(11);
+    line-height: rem(16);
+    font-weight: 400;
+    color: $redLightest;
+    text-align: right;
 }

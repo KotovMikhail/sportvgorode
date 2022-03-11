@@ -8,6 +8,12 @@
 	}
 }
 
+@mixin tablet-minwidth {
+	@media (min-width: $tablet-minwidth) {
+		@content;
+	}
+}
+
 @mixin mobile {
 	@media (max-width: $mobile) {
 		@content;
