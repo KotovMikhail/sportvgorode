@@ -1,6 +1,5 @@
 @import "../fonts/fonts";
 
-
 * {
 	padding: 0px;
 	margin: 0px;
@@ -24,11 +23,11 @@ html {
 	height: 100%;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: none;
-  
+
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
 	-ms-tap-highlight-color: rgba(0, 0, 0, 0);
-  
+
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	-ms-font-smoothing: antialiased;
@@ -50,6 +49,27 @@ body {
 	font-weight: $fw-medium;
 	color: $primary;
 	background-color: $bgColor;
+}
+
+* {
+
+
+	&::-webkit-scrollbar-track {
+		background-color: $whiteColor;
+		border-radius: rem(100);
+	}
+
+	&::-webkit-scrollbar {
+		width: rem(17);
+		background-color: $whiteColor;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border: rem(5) solid transparent;
+		border-radius: rem(100);
+		background-color: $primaryLightest5;
+		background-clip: content-box;
+	}
 }
 
 input,

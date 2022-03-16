@@ -1,0 +1,224 @@
+.selectric-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.selectric-responsive {
+  width: 100%;
+}
+
+.selectric {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: rem(8);
+  display: block;
+  appearance: none;
+  border-radius: rem(4);
+  border: 1px solid $primaryLightest2;
+  background-color: #fff;
+  transition: border-color 0.2s;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+
+  .label {
+    display: block;
+    white-space: nowrap;
+    font-size: rem(15);
+    line-height: rem(24);
+    font-weight: 400;
+    color: $primaryLight;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  .arrow {
+    display: block;
+    position: absolute;
+    right: rem(8);
+    top: 0;
+    width: rem(14);
+    height: rem(8);
+    top: 50%;
+    transform: translateY(-50%) rotate(0);
+    transition: transform 0.2s;
+  }
+}
+
+.selectric-focus.selectric-open .selectric {
+  border-color: $blueLightest;
+}
+
+.selectric-hover .selectric {
+  border-color: $primaryLightest;
+
+  .arrow {
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+
+    path {
+      stroke: $primaryLight;
+    }
+  }
+}
+
+.selectric-open {
+  z-index: 9999;
+
+  .selectric {
+    border-color: $primaryLightest;
+  }
+
+  .selectric-items {
+    display: block;
+  }
+}
+
+.selectric-disabled {
+  cursor: default;
+  user-select: none;
+
+  .label {
+    color: $primaryLightest1;
+  }
+
+  .selectric {
+    background-color: $primaryLightest3;
+    color: $primaryLightest1 !important;
+  }
+}
+
+.selectric-hide-select {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+
+  select {
+    position: absolute;
+    left: -100%;
+  }
+
+  &.selectric-is-native {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+      z-index: 1;
+      box-sizing: border-box;
+      opacity: 0;
+    }
+  }
+}
+
+.selectric-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  outline: none !important;
+  border: none !important;
+  *font: 0/0 a !important;
+  background: none !important;
+}
+
+.selectric-temp-show {
+  position: absolute !important;
+  visibility: hidden !important;
+  display: block !important;
+}
+
+/* Items box */
+.selectric-items {
+  display: none; 
+  position: absolute;
+  top: calc(100% + rem(8));
+  left: 0;
+  background: $whiteColor;
+  z-index: -1;
+  border-radius: rem(4);
+  filter: drop-shadow(0px 4px 8px rgba(142, 141, 208, 0.16));
+
+  .selectric-scroll {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .selectric-above & {
+    top: auto;
+    bottom: 100%;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    padding: rem(12) rem(16);
+    font-size: rem(15);
+    line-height: rem(24);
+    font-weight: 400;
+    color: $primaryLightest6;
+    cursor: pointer;
+
+    // &.selected {
+    //   background-color: $primaryLightest1;
+    // }
+
+    // &.highlighted {
+    //   background-color: $primaryLightest1;
+    // }
+
+    &:hover {
+      background-color: $primaryLightest4;
+      color: $blueLightest3;
+    }
+  }
+
+  .disabled {
+    color: $primaryLightest1;
+    background-color: $primaryLightest3;
+    color: $primaryLightest1 !important;
+    cursor: default !important;
+    user-select: none;
+  }
+
+  .selectric-group {
+    .selectric-group-label {
+      font-weight: bold;
+      padding-left: 10px;
+      cursor: default;
+      user-select: none;
+      background: none;
+      color: #444;
+    }
+
+    &.disabled li {
+      filter: alpha(opacity=100);
+      opacity: 1;
+    }
+
+    li {
+      padding-left: 25px;
+    }
+  }
+}

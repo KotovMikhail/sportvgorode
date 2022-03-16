@@ -154,7 +154,7 @@ h4,
         width: 100%;
 
         .nav__item-counter {
-            color: $primary
+            color: $primary;
         }
     }
 
@@ -413,7 +413,8 @@ h4,
             line-height: rem(12);
             font-weight: 400;
 
-            &::before, &::after {
+            &::before,
+            &::after {
                 width: rem(62);
                 height: rem(62);
             }
@@ -421,9 +422,7 @@ h4,
     }
 }
 
-
 .form {
-
     &__item {
         margin-bottom: rem(24);
     }
@@ -440,96 +439,40 @@ h4,
     color: $primaryLighter;
 }
 
-.add-team {
+.add-arena-item {
     &__select {
         width: 100%;
     }
 }
 
-.select {
-    display: block;
-    position: relative;
-    width: 100%;
-    max-width: 100%;
+.add-official-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    select {
+    .selectric-wrapper {
         width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: rem(8);
-        display: block;
+        max-width: rem(136);
+    }
+
+    &__heading {
+        flex-shrink: 0;
+        margin-bottom: 0;
+        margin-right: rem(24);
         font-size: rem(15);
         line-height: rem(24);
-        font-weight: 400;
-        appearance: none;
-        border-radius: rem(4);
-        border: 1px solid $primaryLightest2;
-        color: $primaryLight;
-        background-color: #fff;
-        transition: border-color 0.2s;
-        cursor: pointer;
+        color: $primary;
 
-        &.error {
-            border-color: $redLightest;
-        }
-
-       & option[value=""][disabled] {
-            display: none;
-        }
-
-        & + svg {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%) rotate(0);
-            right: rem(8);
-            width: rem(14);
-            height: rem(8);
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            pointer-events: none;
-            transition: transform 0.2s;
-        }
-
-        &::-ms-expand {
-            display: none;
-        }
-
-        &:hover {
-            border-color: $primary;
-            color: $primaryLight;
-
-            & + svg {
-                transform: translateY(-50%) rotate(-90deg);
-
-                path {
-                    stroke: $primary;
-                }
-            }
-        }
-
-        &:focus {
-            outline: none;
-        }
-    }
-
-    @include mobileSmall {
-        select {
+        @include mobileSmall {
+            margin-right: rem(16);
+            flex-shrink: 1;
             font-size: rem(14);
             line-height: rem(20);
-
-            & + svg {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%) rotate(0);
-                right: rem(8);
-                width: rem(12);
-                height: rem(8);
-
-            }
         }
     }
-}
 
+
+}
 
 
 .error-text {
