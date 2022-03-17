@@ -45,6 +45,7 @@
 		"gulp-zip": "latest",
 		"html-webpack-plugin": "latest",
 		"jquery": "^3.5.1",
+		"jquery-mask-plugin": "^1.14.16",
 		"lightgallery": "latest",
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "latest",

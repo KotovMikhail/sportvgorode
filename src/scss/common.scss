@@ -426,11 +426,65 @@ h4,
     &__item {
         margin-bottom: rem(24);
     }
+
+    &__item-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item-col {
+        width: 100%;
+
+        &_left {
+
+        }
+
+        &_right {
+            margin-left: rem(24);
+        }
+    }
+
+    &__input-phone-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__input {
+        padding: rem(7) rem(8);
+        font-size: rem(15);
+        line-height: rem(24);
+        font-weight: 400;
+        color: $primary;
+        background-color: $whiteColor;
+        border: 1px solid $primaryLightest2;
+        border-radius: rem(4);
+        transition: border-color .2s;
+        outline: 0;
+    }
+    
+
+    &__input-add-btn {
+        min-width: rem(40);
+        min-height: rem(40);
+        padding: rem(7) rem(8);
+        font-size: rem(24);
+        line-height: rem(1);
+        font-weight: 300;
+        color: $primaryLightest;
+        background-color: $whiteColor;
+        border: 1px solid $primaryLightest2;
+        border-radius: rem(4);
+        transition: border-color .2s;
+        margin-left: rem(8);
+        flex-grow: 0;
+    }
 }
 
 // Select
 
-.add-heading {
+.add-heading {    
     margin-bottom: rem(4);
     padding-left: rem(9);
     font-size: rem(13);
@@ -439,7 +493,7 @@ h4,
     color: $primaryLighter;
 }
 
-.add-arena-item {
+.add-complex-item {
     &__select {
         width: 100%;
     }
@@ -470,7 +524,9 @@ h4,
             line-height: rem(20);
         }
     }
+}
 
+.add-city-item {
 
 }
 

@@ -99,31 +99,57 @@
 
                         <ul class="form__list">
                             <li class="form__item add-arena-item">
-                                <p class="add-heading add-arena-item__heading">Выберите тип</p>
-    
-                                <select id="select1" class="select1 add-arena-item__select">
-                                    <option value="" disabled>Спортивный комплекс 1</option>
-                                    <option value="">Спортивный комплекс 2</option>
-                                    <option value="">Спортивный комплекс 3</option>
-                                    <option value="">Спортивный комплекс 4</option>
-                                    <option value="">Спортивный комплекс 5</option>
-                                    <option value="">Спортивный комплекс 6</option>
-                                    <option value="">Спортивный комплекс 7</option>
-                                </select> 
+                                <p class="add-heading add-complex-item__heading">Выберите тип</p>
+
+                                <select id="selectComplex" class="add-complex-item__select">
+                                    <option value="SportComplex1">Спортивный комплекс 1</option>
+                                    <option value="SportComplex2">Спортивный комплекс 2</option>
+                                    <option value="SportComplex3">Спортивный комплекс 3</option>
+                                    <option value="SportComplex4">Спортивный комплекс 4</option>
+                                    <option value="SportComplex5">Спортивный комплекс 5</option>
+                                    <option value="SportComplex6">Спортивный комплекс 6</option>
+                                    <option value="SportComplex7">Спортивный комплекс 7</option>
+                                </select>
                                 <div class="error-text">Укажите тип площадки</div>
                             </li>
-    
+
                             <li class="form__item add-official-item">
                                 <p class="add-heading add-official-item__heading">Вы официальный представитель?</p>
-                                <select id="select2" class="select2 add-official-item__select">
+                                <select id="selectOfficial" class="add-official-item__select">
                                     <option value="Yes">Да</option>
-                                    <option value="No">Нет</option>                 
-                                </select>  
-                               
+                                    <option value="No">Нет</option>
+                                </select>
+
+                            </li>
+
+                            <li class="form__item form__item-group">
+                                <div class="form__item-col form__item-col_left">
+                                    <div class="add-city-item">
+                                        <p class="add-heading add-city-item__heading">Город</p>
+                                        <select id="selectCity" class="add-city-item__select">
+                                            <option value="Moscow">Москва</option>
+                                            <option value="Sankt-Peterburg">Санкт-Петербург</option>
+                                            <option value="San-Francisco">Сан-Франциско</option>
+                                            <option value="Antananirivu">Антананариву</option>
+                                            <option value="Mariupol">Мариуполь</option>
+                                        </select>
+                                        <div class="error-text">Укажите город</div>
+                                    </div>                            
+                                </div>
+
+                                <div class="form__item-col form__item-col_right">
+                                    <p class="add-heading add-city-item__heading">Телефон</p>
+                                    <div class="form__input-phone-box">
+                                        <input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
+                                        <button class="form__input-add-btn form__input-add-btn_plus" type="button">+</button>
+                                    </div>
+                                    <div class="error-text">Укажите телефон</div>
+                                </div>
+
                             </li>
                         </ul>
 
- 
+
 
 
 

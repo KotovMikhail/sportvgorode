@@ -1,9 +1,13 @@
 # sportvgorode
 //------------------------------------------------------------------------------
-<code>[Документация сборки](https://drive.google.com/file/d/1W8PJqm6Tmy63AYnXMw4zEQYmD_fmXiDr/view)</code>
+<code>[Документация сборки Gulp](https://drive.google.com/file/d/1W8PJqm6Tmy63AYnXMw4zEQYmD_fmXiDr/view)</code>
 //------------------------------------------------------------------------------
 <code>
 	[Документация для селектов](http://selectric.js.org/)
+</code>
+//------------------------------------------------------------------------------
+<code>
+	[Документация Jquery Input Mask](https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html)
 </code>
 
 Документация: 
