@@ -222,6 +222,9 @@ h6 {
   transform: translateY(-50%) rotate(0);
   transition: transform 0.2s;
 }
+.selectric .arrow path {
+  transition: stroke 0.5s;
+}
 
 .selectric-focus.selectric-open .selectric {
   border-color: #2D99FD;
@@ -229,10 +232,6 @@ h6 {
 
 .selectric-hover .selectric {
   border-color: #C4C4C4;
-}
-.selectric-hover .selectric .arrow {
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
 }
 .selectric-hover .selectric .arrow path {
   stroke: #1E1E1E;
@@ -243,6 +242,9 @@ h6 {
 }
 .selectric-open .selectric {
   border-color: #C4C4C4;
+}
+.selectric-open .selectric .arrow path {
+  stroke: #1E1E1E;
 }
 .selectric-open .selectric-items {
   display: block;
@@ -337,21 +339,29 @@ h6 {
 }
 .selectric-items li {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-weight: 400;
   color: #212121;
   cursor: pointer;
+  transition: color 0.2s;
 }
-.selectric-items li:hover {
-  background-color: #F8F8FA;
+.selectric-items li:not(.disabled):hover {
+  color: #0070FF;
+}
+.selectric-items li:not(.disabled):active {
   color: #605DEC;
 }
-.selectric-items .disabled {
+.selectric-items li.highlighted {
+  background-color: #F4F4F4;
+}
+.selectric-items li.highlighted:hover {
+  color: #212121;
+}
+.selectric-items li.disabled {
   color: #D3D7DB;
   background-color: #F4F4F4;
-  color: #D3D7DB !important;
   cursor: default !important;
   user-select: none;
 }
