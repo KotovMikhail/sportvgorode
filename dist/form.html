@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220321152850">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220321161603">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -157,8 +157,8 @@
 									</div>
 
 									<div class="form__input-phone-box form__input-phone-box_minus">
-										<input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
-										<button class="form__input-add-btn" type="button"></button>
+										<div class="form__input form__input_phone">+7 (925) 838 63 53</div>
+										<button class="form__input-add-btn form__input-add-btn_minus" type="button"></button>
 									</div>
 									<div class="error-text">Укажите телефон</div>
 								</div>
@@ -176,13 +176,38 @@
 								<div class="error-text">Такого адреса нет на карте вашего города</div>
 							</li>
 
+							<li class="form__item add-metro-item">
+								<p class="add-heading add-metro-item__heading">Ближайшее метро</p>
+
+								<select id="selectMetro" class="add-metro-item__select">
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+								</select>
+								<div class="add-metro-item__counter-box">
+									<span class="add-metro-item__counter">0</span><span class="add-metro-item__counter-devider">/</span><span class="add-metro-item__counter-all">3</span>
+								</div>
+								<div class="add-metro-item__elem-box">
+									<span class="add-metro-item__elem">Спортивная</span>
+									<span class="add-metro-item__elem">Спортивная</span>
+								</div>
+
+
+
+								<div class="error-text">Укажите метро</div>
+							</li>
+
 						</ul>
 
 
 
 
 
-
+						<button class="btn btn_blue form__add-btn _disabled" type="button">Добавить</button>
 
 
 					</form>
@@ -213,7 +238,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220321152850"></script>
+	<script src="js/app.min.js?_v=20220321161603"></script>
 </body>
 
 </html>

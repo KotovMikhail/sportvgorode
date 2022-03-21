@@ -547,7 +547,6 @@ h4,
 .nav__btn {
   margin-top: 2rem;
   width: 100%;
-  min-height: 3rem;
 }
 
 .sub-nav__list {
@@ -599,6 +598,7 @@ h4,
   line-height: 1.5rem;
   font-weight: 400;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  min-height: 3rem;
 }
 .btn_grey {
   border: 1px solid #E2E2E2;
@@ -630,7 +630,8 @@ h4,
 .btn_green:focus {
   outline: 1px dashed #2D99FD;
 }
-.btn_disabled {
+.btn._disabled {
+  color: #D3D7DB;
   background-color: #F4F4F4;
 }
 
@@ -757,8 +758,16 @@ h4,
   }
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .form__item {
   margin-bottom: 1.5rem;
+}
+.form__item:last-child {
+  margin-bottom: 0;
 }
 .form__item-group {
   display: flex;
@@ -840,6 +849,12 @@ h4,
   line-height: 1.5rem;
   font-weight: 400;
 }
+.form__add-btn {
+  margin-top: 0.5rem;
+  margin-left: auto;
+  width: 100%;
+  max-width: 8.5rem;
+}
 @media (max-width: 63.99875em) {
   .form .form__item-group_city {
     flex-direction: column;
@@ -900,6 +915,50 @@ h4,
 
 .add-arena-address-item .form__input {
   width: 100%;
+}
+
+.add-metro-item .selectric-items li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.add-metro-item .selectric-items li::before {
+  content: "м";
+  margin-right: 0.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #FF4161;
+}
+.add-metro-item__counter-box {
+  margin-top: 0.125rem;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  font-weight: 400;
+  color: #C4C4C4;
+}
+.add-metro-item__elem-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.add-metro-item__elem {
+  margin-top: 0.5rem;
+  position: relative;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.add-metro-item__elem::before {
+  content: "м";
+  margin-right: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #FF4161;
 }
 
 .error-text {

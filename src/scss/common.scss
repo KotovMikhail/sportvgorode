@@ -171,8 +171,7 @@ h4,
 
     &__btn {
         margin-top: rem(32);
-        width: 100%;
-        min-height: rem(48);
+        width: 100%;       
     }
 }
 
@@ -236,6 +235,7 @@ h4,
     line-height: rem(24);
     font-weight: 400;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    min-height: rem(48);
 
     &_grey {
         border: 1px solid $primaryLightest2;
@@ -276,7 +276,8 @@ h4,
         }
     }
 
-    &_disabled {
+    &._disabled {
+        color: $primaryLightest1;
         background-color: $primaryLightest3;
     }
 }
@@ -427,8 +428,16 @@ h4,
 }
 
 .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
     &__item {
         margin-bottom: rem(24);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__item-group {
@@ -532,6 +541,13 @@ h4,
         }
     }
 
+    &__add-btn {
+        margin-top: rem(8);
+        margin-left: auto;
+        width: 100%;
+        max-width: rem(136);
+    }
+
     @include laptop {
         .form__item-group_city {
             flex-direction: column;
@@ -606,6 +622,57 @@ h4,
 .add-arena-address-item {
     .form__input {
         width: 100%;
+    }
+}
+
+.add-metro-item {
+    .selectric-items li {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: 'м';
+            margin-right: rem(4);
+            font-size: rem(15);
+            line-height: rem(24);
+            font-weight: 400;
+            color: $redLighter;
+        }
+    }
+
+    &__counter-box {
+        margin-top: rem(2);
+        display: flex;
+        justify-content: flex-end;
+        font-size: rem(11);
+        line-height: rem(16);
+        font-weight: 400;
+        color: $primaryLightest;
+    }
+
+    &__elem-box {        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start; 
+    }
+
+    &__elem {
+        margin-top: rem(8);
+        position: relative;
+        font-size: rem(15);
+        line-height: rem(24);
+        font-weight: 400;
+
+        &::before {
+            content: 'м';
+            margin-right: rem(4);
+            font-size: rem(14);
+            line-height: rem(20);
+            font-weight: 400;
+            color: $redLighter;
+        }
     }
 }
 
