@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Форма</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220321115728">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+			</div>
+		</header>
+		<main class="page __container">
+
+			<div class="left">
+				<nav class="nav">
+					<div class="nav__wrap">
+						<h3 class="nav__heading">Моя страница</h3>
+						<ul class="nav__list">
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Избранное</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Арены</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Спортшколы</span><span class="nav__item-counter sub-nav__item-counter">1</span></li>
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Команды</span><span class="nav__item-counter sub-nav__item-counter">2</span></li>
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Тренировки</span><span class="nav__item-counter sub-nav__item-counter">3</span></li>
+								</ul>
+							</li>
+
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Мой профиль</span>
+									<span class="nav__item-counter sub-nav__item-counter">1</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item">
+										<span class="sub-nav__item-text">Уведомления</span><span class="nav__item-counter sub-nav__item-counter">1</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<div class="nav__wrap">
+						<h3 class="nav__heading">Управление</h3>
+						<ul class="nav__list">
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Арены</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">ЛД Морозово</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+								</ul>
+							</li>
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Спортшколы</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Hockey Chance</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+								</ul>
+							</li>
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Команды</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">ХК Харламов</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+					<button class="btn btn_blue nav__btn" type="button">Добавить</button>
+				</nav>
+			</div>
+
+			<div class="content">
+				<div class="content__inner">
+					<div class="append">
+						<div class="append__main">
+							<h1 class="h1 append__title">Добавить</h1>
+							<p class="h2 append__descr">Спортивную арену</p>
+						</div>
+						<div class="append__img">
+							<button class="avatar-add-btn append__avatar" type="button">
+								<span class="avatar-add-btn__text">Загрузить логотип</span>
+							</button>
+							<!-- <picture><source srcset="img/Avatar.webp" type="image/webp"><img src="img/Avatar.png" alt=""></picture>
+                            Не совсем ясно, как будет работать установка аватара
+                            Если что, то переделаю, как надо -->
+						</div>
+					</div>
+
+					<form action="#" class="form content__form" method="POST">
+
+						<ul class="form__list">
+							<li class="form__item add-arena-item">
+								<p class="add-heading add-complex-item__heading">Выберите тип</p>
+
+								<select id="selectComplex" class="add-complex-item__select">
+									<option value="SportComplex1">Спортивный комплекс 1</option>
+									<option value="SportComplex2">Спортивный комплекс 2</option>
+									<option value="SportComplex3">Спортивный комплекс 3</option>
+									<option value="SportComplex4">Спортивный комплекс 4</option>
+									<option value="SportComplex5">Спортивный комплекс 5</option>
+									<option value="SportComplex6">Спортивный комплекс 6</option>
+									<option value="SportComplex7">Спортивный комплекс 7</option>
+								</select>
+								<div class="error-text">Укажите тип площадки</div>
+							</li>
+
+							<li class="form__item add-official-item">
+								<p class="add-heading add-official-item__heading">Вы официальный представитель?</p>
+								<select id="selectOfficial" class="add-official-item__select">
+									<option value="Yes">Да</option>
+									<option value="No">Нет</option>
+								</select>
+
+							</li>
+
+							<li class="form__item form__item-group">
+								<div class="form__item-col form__item-col_left">
+									<div class="add-city-item">
+										<p class="add-heading add-city-item__heading">Город</p>
+										<select id="selectCity" class="add-city-item__select">
+											<option value="Moscow">Москва</option>
+											<option value="Sankt-Peterburg">Санкт-Петербург</option>
+											<option value="San-Francisco">Сан-Франциско</option>
+											<option value="Antananirivu">Антананариву</option>
+											<option value="Mariupol">Мариуполь</option>
+										</select>
+										<div class="error-text">Укажите город</div>
+									</div>
+								</div>
+
+								<div class="form__item-col form__item-col_right">
+									<p class="add-heading add-city-item__heading">Телефон</p>
+									<div class="form__input-phone-box">
+										<input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
+										<button class="form__input-add-btn form__input-add-btn_plus" type="button">+</button>
+									</div>
+									<div class="error-text">Укажите телефон</div>
+								</div>
+
+							</li>
+						</ul>
+
+
+
+
+
+
+
+
+					</form>
+
+
+				</div>
+			</div>
+
+			<div class="right">
+				Правый
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="js/app.min.js?_v=20220321115728"></script>
+</body>
+
+</html>
