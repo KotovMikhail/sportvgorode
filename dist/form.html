@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220321115728">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220321152850">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,7 +134,7 @@
 
 							</li>
 
-							<li class="form__item form__item-group">
+							<li class="form__item form__item-group form__item-group_city">
 								<div class="form__item-col form__item-col_left">
 									<div class="add-city-item">
 										<p class="add-heading add-city-item__heading">Город</p>
@@ -151,14 +151,31 @@
 
 								<div class="form__item-col form__item-col_right">
 									<p class="add-heading add-city-item__heading">Телефон</p>
-									<div class="form__input-phone-box">
+									<div class="form__input-phone-box form__input-phone-box_plus">
 										<input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
-										<button class="form__input-add-btn form__input-add-btn_plus" type="button">+</button>
+										<button class="form__input-add-btn form__input-add-btn_plus" type="button"></button>
+									</div>
+
+									<div class="form__input-phone-box form__input-phone-box_minus">
+										<input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
+										<button class="form__input-add-btn" type="button"></button>
 									</div>
 									<div class="error-text">Укажите телефон</div>
 								</div>
-
 							</li>
+
+							<li class="form__item add-arena-name-item">
+								<p class="add-heading add-arena-name-item__heading">Название арены</p>
+								<input class="form__input form__input_arena-name" type="text" name="arenaName" placeholder="Название арены" required />
+								<div class="error-text">Арена с таким названием уже есть на сайте</div>
+							</li>
+
+							<li class="form__item add-arena-address-item">
+								<p class="add-heading add-arena-address-item__heading">Адрес</p>
+								<input class="form__input form__input_arena-address" type="text" name="arenaAddress" placeholder="Адрес" required />
+								<div class="error-text">Такого адреса нет на карте вашего города</div>
+							</li>
+
 						</ul>
 
 
@@ -196,7 +213,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220321115728"></script>
+	<script src="js/app.min.js?_v=20220321152850"></script>
 </body>
 
 </html>

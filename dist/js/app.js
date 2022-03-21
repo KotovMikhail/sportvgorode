@@ -1433,11 +1433,11 @@
               },
               j = {}.hasOwnProperty,
               N = [],
-              I = N.pop,
-              M = N.push,
+              M = N.pop,
+              I = N.push,
               L = N.push,
-              q = N.slice,
-              O = function (e, t) {
+              O = N.slice,
+              q = function (e, t) {
                 for (var n = 0, r = e.length; n < r; n++)
                   if (e[n] === t) return n;
                 return -1;
@@ -1538,13 +1538,13 @@
                 { dir: "parentNode", next: "legend" }
               );
             try {
-              L.apply((N = q.call(w.childNodes)), w.childNodes),
+              L.apply((N = O.call(w.childNodes)), w.childNodes),
                 N[w.childNodes.length].nodeType;
             } catch (e) {
               L = {
                 apply: N.length
                   ? function (e, t) {
-                      M.apply(e, q.call(t));
+                      I.apply(e, O.call(t));
                     }
                   : function (e, t) {
                       for (var n = e.length, r = 0; (e[n++] = t[r++]); );
@@ -1926,7 +1926,7 @@
                                 : t == d || (t.ownerDocument == w && x(w, t))
                                 ? 1
                                 : c
-                                ? O(c, e) - O(c, t)
+                                ? q(c, e) - q(c, t)
                                 : 0
                               : 4 & r
                               ? -1
@@ -1951,7 +1951,7 @@
                               : o
                               ? 1
                               : c
-                              ? O(c, e) - O(c, t)
+                              ? q(c, e) - q(c, t)
                               : 0;
                           if (i === o) return fe(e, t);
                           for (n = e; (n = n.parentNode); ) a.unshift(n);
@@ -2249,7 +2249,7 @@
                         r.setFilters.hasOwnProperty(e.toLowerCase())
                           ? ue(function (e, n) {
                               for (var r, o = i(e, t), a = o.length; a--; )
-                                e[(r = O(e, o[a]))] = !(n[r] = o[a]);
+                                e[(r = q(e, o[a]))] = !(n[r] = o[a]);
                             })
                           : function (e) {
                               return i(e, 0, n);
@@ -2498,7 +2498,7 @@
                       }
                       for (c = v.length; c--; )
                         (p = v[c]) &&
-                          (u = i ? O(o, p) : f[c]) > -1 &&
+                          (u = i ? q(o, p) : f[c]) > -1 &&
                           (o[u] = !(a[u] = p));
                     }
                   } else (v = ke(v === a ? v.splice(h, v.length) : v)), i ? i(null, a, v, l) : L.apply(a, v);
@@ -2523,7 +2523,7 @@
                   ),
                   p = be(
                     function (e) {
-                      return O(t, e) > -1;
+                      return q(t, e) > -1;
                     },
                     s,
                     !0
@@ -2646,7 +2646,7 @@
                               if (o) {
                                 if (v > 0)
                                   for (; y--; )
-                                    x[y] || b[y] || (b[y] = I.call(l));
+                                    x[y] || b[y] || (b[y] = M.call(l));
                                 b = ke(b);
                               }
                               L.apply(l, b),
@@ -2795,9 +2795,9 @@
           function N(e, t) {
             return e.nodeName && e.nodeName.toLowerCase() === t.toLowerCase();
           }
-          var I =
+          var M =
             /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
-          function M(e, t, n) {
+          function I(e, t, n) {
             return v(t)
               ? T.grep(e, function (e, r) {
                   return !!t.call(e, r, e) !== n;
@@ -2846,13 +2846,13 @@
                 return r > 1 ? T.uniqueSort(n) : n;
               },
               filter: function (e) {
-                return this.pushStack(M(this, e || [], !1));
+                return this.pushStack(I(this, e || [], !1));
               },
               not: function (e) {
-                return this.pushStack(M(this, e || [], !0));
+                return this.pushStack(I(this, e || [], !0));
               },
               is: function (e) {
-                return !!M(
+                return !!I(
                   this,
                   "string" == typeof e && j.test(e) ? T(e) : e || [],
                   !1
@@ -2860,7 +2860,7 @@
               },
             });
           var L,
-            q = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/;
+            O = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/;
           ((T.fn.init = function (e, t, n) {
             var r, i;
             if (!e) return this;
@@ -2869,7 +2869,7 @@
                 !(r =
                   "<" === e[0] && ">" === e[e.length - 1] && e.length >= 3
                     ? [null, e, null]
-                    : q.exec(e)) ||
+                    : O.exec(e)) ||
                 (!r[1] && t)
               )
                 return !t || t.jquery
@@ -2886,7 +2886,7 @@
                       !0
                     )
                   ),
-                  I.test(r[1]) && T.isPlainObject(t))
+                  M.test(r[1]) && T.isPlainObject(t))
                 )
                   for (r in t) v(this[r]) ? this[r](t[r]) : this.attr(r, t[r]);
                 return this;
@@ -2906,7 +2906,7 @@
               : T.makeArray(e, this);
           }).prototype = T.fn),
             (L = T(x));
-          var O = /^(?:parents|prev(?:Until|All))/,
+          var q = /^(?:parents|prev(?:Until|All))/,
             H = { children: !0, contents: !0, next: !0, prev: !0 };
           function P(e, t) {
             for (; (e = e[t]) && 1 !== e.nodeType; );
@@ -3009,7 +3009,7 @@
                     "Until" !== e.slice(-5) && (r = n),
                     r && "string" == typeof r && (i = T.filter(r, i)),
                     this.length > 1 &&
-                      (H[e] || T.uniqueSort(i), O.test(e) && i.reverse()),
+                      (H[e] || T.uniqueSort(i), q.test(e) && i.reverse()),
                     this.pushStack(i)
                   );
                 };
@@ -3867,7 +3867,7 @@
               })
             );
           }
-          function Ie(e, t, n) {
+          function Me(e, t, n) {
             n
               ? (J.set(e, t, !1),
                 T.event.add(e, t, {
@@ -4127,7 +4127,7 @@
                     me.test(t.type) &&
                       t.click &&
                       N(t, "input") &&
-                      Ie(t, "click", Se),
+                      Me(t, "click", Se),
                     !1
                   );
                 },
@@ -4137,7 +4137,7 @@
                     me.test(t.type) &&
                       t.click &&
                       N(t, "input") &&
-                      Ie(t, "click"),
+                      Me(t, "click"),
                     !0
                   );
                 },
@@ -4262,10 +4262,10 @@
             T.each({ focus: "focusin", blur: "focusout" }, function (e, t) {
               T.event.special[e] = {
                 setup: function () {
-                  return Ie(this, e, je), !1;
+                  return Me(this, e, je), !1;
                 },
                 trigger: function () {
-                  return Ie(this, e), !0;
+                  return Me(this, e), !0;
                 },
                 delegateType: t,
               };
@@ -4330,10 +4330,10 @@
                 );
               },
             });
-          var Me = /<script|<style|<link/i,
+          var Ie = /<script|<style|<link/i,
             Le = /checked\s*(?:[^=]|=\s*.checked.)/i,
-            qe = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g;
-          function Oe(e, t) {
+            Oe = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g;
+          function qe(e, t) {
             return (
               (N(e, "table") &&
                 N(11 !== t.nodeType ? t : t.firstChild, "tr") &&
@@ -4423,7 +4423,7 @@
                             { nonce: u.nonce || u.getAttribute("nonce") },
                             c
                           )
-                        : w(u.textContent.replace(qe, ""), u, c));
+                        : w(u.textContent.replace(Oe, ""), u, c));
             }
             return e;
           }
@@ -4523,7 +4523,7 @@
                   (1 !== this.nodeType &&
                     11 !== this.nodeType &&
                     9 !== this.nodeType) ||
-                    Oe(this, e).appendChild(e);
+                    qe(this, e).appendChild(e);
                 });
               },
               prepend: function () {
@@ -4533,7 +4533,7 @@
                     11 === this.nodeType ||
                     9 === this.nodeType
                   ) {
-                    var t = Oe(this, e);
+                    var t = qe(this, e);
                     t.insertBefore(e, t.firstChild);
                   }
                 });
@@ -4574,7 +4574,7 @@
                     if (void 0 === e && 1 === t.nodeType) return t.innerHTML;
                     if (
                       "string" == typeof e &&
-                      !Me.test(e) &&
+                      !Ie.test(e) &&
                       !xe[(ve.exec(e) || ["", ""])[1].toLowerCase()]
                     ) {
                       e = T.htmlPrefilter(e);
@@ -5996,14 +5996,14 @@
           var Dt = /\[\]$/,
             jt = /\r?\n/g,
             Nt = /^(?:submit|button|image|reset|file)$/i,
-            It = /^(?:input|select|textarea|keygen)/i;
-          function Mt(e, t, n, r) {
+            Mt = /^(?:input|select|textarea|keygen)/i;
+          function It(e, t, n, r) {
             var i;
             if (Array.isArray(t))
               T.each(t, function (t, i) {
                 n || Dt.test(e)
                   ? r(e, i)
-                  : Mt(
+                  : It(
                       e +
                         "[" +
                         ("object" == typeof i && null != i ? t : "") +
@@ -6014,7 +6014,7 @@
                     );
               });
             else if (n || "object" !== k(t)) r(e, t);
-            else for (i in t) Mt(e + "[" + i + "]", t[i], n, r);
+            else for (i in t) It(e + "[" + i + "]", t[i], n, r);
           }
           (T.param = function (e, t) {
             var n,
@@ -6031,7 +6031,7 @@
               T.each(e, function () {
                 i(this.name, this.value);
               });
-            else for (n in e) Mt(n, e[n], t, i);
+            else for (n in e) It(n, e[n], t, i);
             return r.join("&");
           }),
             T.fn.extend({
@@ -6048,7 +6048,7 @@
                     return (
                       this.name &&
                       !T(this).is(":disabled") &&
-                      It.test(this.nodeName) &&
+                      Mt.test(this.nodeName) &&
                       !Nt.test(e) &&
                       (this.checked || !me.test(e))
                     );
@@ -6067,8 +6067,8 @@
               },
             });
           var Lt = /%20/g,
-            qt = /#.*$/,
-            Ot = /([?&])_=[^&]*/,
+            Ot = /#.*$/,
+            qt = /([?&])_=[^&]*/,
             Ht = /^(.*?):[ \t]*([^\r\n]*)$/gm,
             Pt = /^(?:GET|HEAD)$/,
             Rt = /^\/\//,
@@ -6257,7 +6257,7 @@
                   T.event.trigger("ajaxStart"),
                 (d.type = d.type.toUpperCase()),
                 (d.hasContent = !Pt.test(d.type)),
-                (i = d.url.replace(qt, "")),
+                (i = d.url.replace(Ot, "")),
                 d.hasContent
                   ? d.data &&
                     d.processData &&
@@ -6271,7 +6271,7 @@
                       (d.processData || "string" == typeof d.data) &&
                       ((i += (St.test(i) ? "&" : "?") + d.data), delete d.data),
                     !1 === d.cache &&
-                      ((i = i.replace(Ot, "$1")),
+                      ((i = i.replace(qt, "$1")),
                       (f = (St.test(i) ? "&" : "?") + "_=" + Et.guid++ + f)),
                     (d.url = i + f)),
                 d.ifModified &&
@@ -6731,7 +6731,7 @@
                         t.head.appendChild(r))
                       : (t = x)),
                   (o = !n && []),
-                  (i = I.exec(e))
+                  (i = M.exec(e))
                     ? [t.createElement(i[1])]
                     : ((i = Ce([e], t, o)),
                       o && o.length && T(o).remove(),
@@ -7074,18 +7074,24 @@
       t("#selectComplex").selectric({
         arrowButtonMarkup:
           '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+        disableOnMobile: !1,
+        nativeOnMobile: !1,
       });
     }),
       t(function () {
         t("#selectOfficial").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+          disableOnMobile: !1,
+          nativeOnMobile: !1,
         });
       }),
       t(function () {
         t("#selectCity").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+          disableOnMobile: !1,
+          nativeOnMobile: !1,
         });
       }),
       t(function (e) {

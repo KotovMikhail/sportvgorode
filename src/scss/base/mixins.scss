@@ -1,6 +1,10 @@
 
 
-
+@mixin laptop {
+	@media (max-width: $laptop) {
+		@content;
+	}
+}
 
 @mixin tablet {
 	@media (max-width: $tablet) {
