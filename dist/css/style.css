@@ -593,12 +593,12 @@ h4,
 }
 
 .btn {
-  border-radius: 0.25rem;
+  min-height: 3rem;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-weight: 400;
+  border-radius: 0.25rem;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-  min-height: 3rem;
 }
 .btn_grey {
   border: 1px solid #E2E2E2;
@@ -633,6 +633,11 @@ h4,
 .btn._disabled {
   color: #D3D7DB;
   background-color: #F4F4F4;
+}
+@media (max-width: 61.99875em) {
+  .btn {
+    min-height: 2.5rem;
+  }
 }
 
 .append {
@@ -850,10 +855,10 @@ h4,
   font-weight: 400;
 }
 .form__add-btn {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-left: auto;
   width: 100%;
-  max-width: 8.5rem;
+  max-width: 11.5rem;
 }
 @media (max-width: 63.99875em) {
   .form .form__item-group_city {
@@ -867,6 +872,12 @@ h4,
   }
   .form .form__item-group_city .form__item-col_right {
     margin-left: 0;
+  }
+}
+@media (max-width: 29.99875em) {
+  .form__add-btn {
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 
@@ -917,6 +928,15 @@ h4,
   width: 100%;
 }
 
+.add-metro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.add-metro-item .selectric-add-metro-item__select {
+  width: 100%;
+}
 .add-metro-item .selectric-items li {
   position: relative;
   display: flex;
@@ -932,6 +952,7 @@ h4,
 }
 .add-metro-item__counter-box {
   margin-top: 0.125rem;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
   font-size: 0.6875rem;
@@ -959,6 +980,69 @@ h4,
   line-height: 1.25rem;
   font-weight: 400;
   color: #FF4161;
+}
+
+.add-cover-item__img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: 0.25rem;
+}
+.add-cover-item__btn {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.4%;
+  background-color: #F2F9FF;
+  z-index: 0;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.add-cover-item__btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(45, 153, 253, 0.5);
+  z-index: 1;
+  transition: background-color 0.2s;
+}
+.add-cover-item__btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../img/icons/plus-white.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+.add-cover-item__btn._active .add-cover-item__img {
+  display: block;
+}
+.add-cover-item__btn._active::after {
+  background-image: url("../img/icons/delete.svg");
+  opacity: 0.5;
+}
+.add-cover-item__btn:hover {
+  border-color: rgba(45, 153, 253, 0.2);
+  background-color: rgba(0, 132, 255, 0.2);
+}
+.add-cover-item__btn:hover::before {
+  background-color: #2D99FD;
 }
 
 .error-text {

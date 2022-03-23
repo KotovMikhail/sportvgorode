@@ -230,12 +230,12 @@ h4,
 // Кнопки
 
 .btn {
-    border-radius: rem(4);
+    min-height: rem(48);
     font-size: rem(15);
     line-height: rem(24);
     font-weight: 400;
+    border-radius: rem(4);
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-    min-height: rem(48);
 
     &_grey {
         border: 1px solid $primaryLightest2;
@@ -279,6 +279,10 @@ h4,
     &._disabled {
         color: $primaryLightest1;
         background-color: $primaryLightest3;
+    }
+
+    @include tablet {
+        min-height: rem(40);   
     }
 }
 
@@ -542,10 +546,10 @@ h4,
     }
 
     &__add-btn {
-        margin-top: rem(8);
+        margin-top: rem(16);
         margin-left: auto;
         width: 100%;
-        max-width: rem(136);
+        max-width: rem(184);
     }
 
     @include laptop {
@@ -562,6 +566,13 @@ h4,
             .form__item-col_right {
                 margin-left: 0;
             }
+        }
+    }
+
+    @include mobileSmall {
+        &__add-btn {
+            margin-left: 0;          
+            max-width: 100%;
         }
     }
 }
@@ -610,9 +621,6 @@ h4,
     }
 }
 
-.add-city-item {
-}
-
 .add-arena-name-item {
     .form__input {
         width: 100%;
@@ -626,6 +634,15 @@ h4,
 }
 
 .add-metro-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .selectric-add-metro-item__select {
+        width: 100%;
+    }
+
     .selectric-items li {
         position: relative;
         display: flex;
@@ -643,6 +660,7 @@ h4,
 
     &__counter-box {
         margin-top: rem(2);
+        margin-left: auto;
         display: flex;
         justify-content: flex-end;
         font-size: rem(11);
@@ -676,6 +694,82 @@ h4,
     }
 }
 
+.add-cover-item {  
+    
+    &__img {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        border-radius: rem(4)
+    }
+
+    &__btn {
+        position: relative;
+        width: 100%;
+        padding-bottom: 66.4%;    
+        background-color: $blueLightest2;
+        z-index: 0;
+        border: 1px solid transparent;
+        border-radius: rem(4);
+        transition: border-color .2s, background-color .2s;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: rem(40);
+            height: rem(40);
+            border-radius: 50%;        
+            background-color: transparentize($blueLightest, 0.5);         
+            z-index: 1;
+            transition: background-color .2s;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: rem(24);
+            height: rem(24);
+            background-image: url("@img/icons/plus-white.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: 2;
+        }
+
+        &._active {
+            .add-cover-item__img {
+                display: block;
+            }
+  
+           
+            &::after {
+                background-image: url("@img/icons/delete.svg"); 
+                opacity: 0.5;
+            }      
+        }
+
+        &:hover {
+            border-color:  transparentize($blueLightest, 0.8);
+            background-color: transparentize($blueLighter, 0.8);
+
+            &::before {
+                background-color: $blueLightest;
+            }
+        }
+    }
+}
+
 .error-text {
     display: none;
     margin-top: rem(3);
@@ -685,3 +779,8 @@ h4,
     color: $redLightest;
     text-align: right;
 }
+
+// .test-title {
+// 	color: red;
+// 	@include adaptiveValue("font-size", 19, 15, 1920, 992);
+// }
