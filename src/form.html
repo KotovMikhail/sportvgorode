@@ -97,11 +97,11 @@
 
                     <form action="#" class="form content__form" method="POST">
 
-                        <ul class="form__list">
-                            <li class="form__item add-arena-item">
-                                <p class="add-heading add-complex-item__heading">Выберите тип</p>
+                        <div class="form__list">
+                            <div class="form__item add-arena">
+                                <p class="add-heading add-complex__heading">Выберите тип</p>
 
-                                <select id="selectComplex" class="add-complex-item__select">
+                                <select id="selectComplex" class="add-complex__select">
                                     <option value="SportComplex1">Спортивный комплекс 1</option>
                                     <option value="SportComplex2">Спортивный комплекс 2</option>
                                     <option value="SportComplex3">Спортивный комплекс 3</option>
@@ -111,22 +111,22 @@
                                     <option value="SportComplex7">Спортивный комплекс 7</option>
                                 </select>
                                 <div class="error-text">Укажите тип площадки</div>
-                            </li>
+                            </div>
 
-                            <li class="form__item add-official-item">
-                                <p class="add-heading add-official-item__heading">Вы официальный представитель?</p>
-                                <select id="selectOfficial" class="add-official-item__select">
+                            <div class="form__item add-official">
+                                <p class="add-heading add-official__heading">Вы официальный представитель?</p>
+                                <select id="selectOfficial" class="add-official__select">
                                     <option value="Yes">Да</option>
                                     <option value="No">Нет</option>
                                 </select>
 
-                            </li>
+                            </div>
 
-                            <li class="form__item form__item-group form__item-group_city">
+                            <div class="form__item form__item-group form__item-group_city">
                                 <div class="form__item-col form__item-col_left">
-                                    <div class="add-city-item">
-                                        <p class="add-heading add-city-item__heading">Город</p>
-                                        <select id="selectCity" class="add-city-item__select">
+                                    <div class="add-city">
+                                        <p class="add-heading add-city__heading">Город</p>
+                                        <select id="selectCity" class="add-city__select">
                                             <option value="Moscow">Москва</option>
                                             <option value="Sankt-Peterburg">Санкт-Петербург</option>
                                             <option value="San-Francisco">Сан-Франциско</option>
@@ -138,7 +138,7 @@
                                 </div>
 
                                 <div class="form__item-col form__item-col_right">
-                                    <p class="add-heading add-city-item__heading">Телефон</p>
+                                    <p class="add-heading add-phone__heading">Телефон</p>
                                     <div class="form__input-phone-box form__input-phone-box_plus">
                                         <input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
                                         <button class="form__input-add-btn form__input-add-btn_plus" type="button"></button>
@@ -150,24 +150,24 @@
                                     </div>
                                     <div class="error-text">Укажите телефон</div>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li class="form__item add-arena-name-item">
-                                <p class="add-heading add-arena-name-item__heading">Название арены</p>
+                            <div class="form__item add-arena-name">
+                                <p class="add-heading add-arena-name__heading">Название арены</p>
                                 <input class="form__input form__input_arena-name" type="text" name="arenaName" placeholder="Название арены" required />
                                 <div class="error-text">Арена с таким названием уже есть на сайте</div>
-                            </li>
+                            </div>
 
-                            <li class="form__item add-arena-address-item">
-                                <p class="add-heading add-arena-address-item__heading">Адрес</p>
+                            <div class="form__item add-arena-address">
+                                <p class="add-heading add-arena-address__heading">Адрес</p>
                                 <input class="form__input form__input_arena-address" type="text" name="arenaAddress" placeholder="Адрес" required />
                                 <div class="error-text">Такого адреса нет на карте вашего города</div>
-                            </li>
+                            </div>
 
-                            <li class="form__item add-metro-item">
-                                <p class="add-heading add-metro-item__heading">Ближайшее метро</p>
+                            <div class="form__item add-metro">
+                                <p class="add-heading add-metro__heading">Ближайшее метро</p>
 
-                                <select id="selectMetro" class="add-metro-item__select">
+                                <select id="selectMetro" class="add-metro__select">
                                     <option value="Sportivnaya">Спортивная</option>
                                     <option value="Sportivnaya">Спортивная</option>
                                     <option value="Sportivnaya">Спортивная</option>
@@ -176,32 +176,122 @@
                                     <option value="Sportivnaya">Спортивная</option>
                                     <option value="Sportivnaya">Спортивная</option>
                                 </select>
-                                <div class="add-metro-item__counter-box">
-                                    <span class="add-metro-item__counter">0</span><span class="add-metro-item__counter-devider">/</span><span class="add-metro-item__counter-all">3</span>
+                                <div class="add-metro__counter-box">
+                                    <span class="add-metro__counter">0</span><span class="add-metro__counter-devider">/</span><span class="add-metro__counter-all">3</span>
                                 </div>
-                                <div class="add-metro-item__elem-box">
-                                    <span class="add-metro-item__elem">Спортивная</span>
-                                    <span class="add-metro-item__elem">Спортивная</span>
+                                <div class="add-metro__elem-box">
+                                    <span class="add-metro__elem">Спортивная</span>
+                                    <span class="add-metro__elem">Спортивная</span>
                                 </div>                                
                                 <div class="error-text">Укажите метро</div>
 
                                 <button class="btn btn_blue form__add-btn _disabled" type="button">Добавить</button>
 
-                            </li>
+                            </div>
 
-                            <li class="form__item add-cover-item">
-                                <p class="add-heading add-cover-item__heading">Обложка</p>                                
+                            <div class="form__item add-cover">
+                                <p class="add-heading add-cover__heading">Обложка</p>                                
                    
-                                <div class="add-cover-item__img-box _acitve">
-                                    <button class="add-cover-item__btn" type="button"></button> 
-                                    <img class="add-cover-item__img" src="@img/cover.jpg" alt="">
-                                </div>                               
+                                <div class="add-cover__img-box">
+                                    <button class="add-cover__btn" type="button"></button> 
+                                    <img class="add-cover__img" src="@img/cover.jpg" alt="">
+                                </div>                              
+                            </div>
+                     
+
+                            <div class="form__item add-gallery">
+                                <p class="add-heading add-gallery__heading">Галерея</p>                                
+                   
+
+                                <ul class="add-gallery__list">
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image1.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image2.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image3.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <!-- <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image1.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image2.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image3.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image2.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box _acitve">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image3.jpg" alt="">
+                                        </div> 
+                                    </li>
+
+                                    <li class="add-gallery__item">
+                                        <div class="add-gallery__img-box">
+                                            <button class="add-gallery__btn" type="button"></button> 
+                                            <img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+                                        </div> 
+                                    </li> -->
+                                </ul>
                                                           
-                            </li>
+                            </div>
 
-                            
-
-                        </ul>
+                        </div>
 
 
 

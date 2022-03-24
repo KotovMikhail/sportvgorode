@@ -171,7 +171,7 @@ h4,
 
     &__btn {
         margin-top: rem(32);
-        width: 100%;       
+        width: 100%;
     }
 }
 
@@ -282,7 +282,7 @@ h4,
     }
 
     @include tablet {
-        min-height: rem(40);   
+        min-height: rem(40);
     }
 }
 
@@ -482,6 +482,7 @@ h4,
             transition: border-color 0.2s;
             margin-left: rem(8);
             flex-grow: 0;
+            outline: none;
 
             &::after,
             &::before {
@@ -571,7 +572,7 @@ h4,
 
     @include mobileSmall {
         &__add-btn {
-            margin-left: 0;          
+            margin-left: 0;
             max-width: 100%;
         }
     }
@@ -588,13 +589,13 @@ h4,
     color: $primaryLighter;
 }
 
-.add-complex-item {
+.add-complex {
     &__select {
         width: 100%;
     }
 }
 
-.add-official-item {
+.add-official {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -621,25 +622,25 @@ h4,
     }
 }
 
-.add-arena-name-item {
+.add-arena-name {
     .form__input {
         width: 100%;
     }
 }
 
-.add-arena-address-item {
+.add-arena-address {
     .form__input {
         width: 100%;
     }
 }
 
-.add-metro-item {
+.add-metro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
-    .selectric-add-metro-item__select {
+    .selectric-add-metro__select {
         width: 100%;
     }
 
@@ -649,7 +650,7 @@ h4,
         align-items: center;
 
         &::before {
-            content: 'м';
+            content: "м";
             margin-right: rem(4);
             font-size: rem(15);
             line-height: rem(24);
@@ -669,11 +670,11 @@ h4,
         color: $primaryLightest;
     }
 
-    &__elem-box {        
+    &__elem-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start; 
+        justify-content: flex-start;
     }
 
     &__elem {
@@ -684,7 +685,7 @@ h4,
         font-weight: 400;
 
         &::before {
-            content: 'м';
+            content: "м";
             margin-right: rem(4);
             font-size: rem(14);
             line-height: rem(20);
@@ -694,68 +695,68 @@ h4,
     }
 }
 
-.add-cover-item {  
-
+.add-cover {
     &__img-box {
         display: block;
         position: relative;
         width: 100%;
-        padding-bottom: 66.4%;    
+        padding-bottom: 66.4%;
         background-color: $blueLightest2;
         z-index: 0;
         outline: 1px solid transparent;
-        border-radius: rem(4);     
-        transition: outline .2s, background-color .2s;
+        border-radius: rem(4);
+        transition: outline 0.2s, background-color 0.2s;
         overflow: hidden;
 
         &._acitve {
-            .add-cover-item__img {
-                 display: block;
-             }
-    
-            
-             .add-cover-item__btn::after {
-                 background-image: url("@img/icons/delete.svg");
-                 opacity: 0.5;
-             }      
-         }
-    
-         &:hover {
-            outline-color:  transparentize($blueLightest, 0.7);
+            .add-cover__img {
+                display: block;
+            }
+
+            .add-cover__btn::after {
+                background-image: url("@img/icons/delete.svg");
+                opacity: 0.5;
+            }
+        }
+
+        &:hover {
+            outline-color: transparentize($blueLightest, 0.7);
             background-color: transparentize($blueLighter, 0.8);
-             
-             .add-cover-item__btn {
+
+            .add-cover__btn {
                 background-color: $blueLightest;
 
                 &::after {
                     opacity: 1;
                 }
 
-                &:focus, &:focus-visible {                
+                &:focus,
+                &:focus-visible {
                     background-color: $blueLightest;
-                 }
-            }   
-         }
+                }
+            }
+        }
 
-         &:focus, &:focus-visible {
+        &:focus,
+        &:focus-visible {
             outline-color: transparentize($blueLightest, 0.2);
             background-color: transparentize($blueLighter, 0.8);
 
-            .add-cover-item__btn {
+            .add-cover__btn {
                 background-color: $blueLightest;
 
                 &::after {
                     opacity: 1;
                 }
 
-                &:focus, &:focus-visible {                
+                &:focus,
+                &:focus-visible {
                     background-color: $blueLightest;
-                 }
-            }  
-         }
+                }
+            }
+        }
     }
-  
-    
+
     &__img {
         display: none;
         position: absolute;
@@ -764,26 +765,25 @@ h4,
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: 0;        
+        z-index: 0;
     }
 
-    &__btn {       
-        content: '';
+    &__btn {
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: rem(40);
         height: rem(40);
-        border-radius: 50%;        
+        border-radius: 50%;
         background-color: transparentize($blueLightest, 0.5);
-        outline: none;      
+        outline: none;
         z-index: 1;
-        transition: background-color .2s;
-        
+        transition: background-color 0.2s;
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 50%;
             left: 50%;
@@ -798,6 +798,11 @@ h4,
         }
     }
 
+    @include mobile {
+        &__img-box {
+            padding-bottom: 67.9%;
+        }
+    }
 }
 
 .error-text {
@@ -810,7 +815,148 @@ h4,
     text-align: right;
 }
 
-// .test-title {
-// 	color: red;
-// 	@include adaptiveValue("font-size", 19, 15, 1920, 992);
-// }
+.add-gallery {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 116px);
+        grid-gap: 8px;
+        grid-auto-rows: auto;   
+    }
+
+    &__img-box {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 65.52%;
+        background-color: $blueLightest2;
+        z-index: 0;
+        outline: 1px solid transparent;
+        border-radius: rem(4);
+        transition: outline 0.2s, background-color 0.2s;
+        overflow: hidden;
+
+        &._acitve {
+            .add-gallery__img {
+                display: block;
+            }
+
+            .add-gallery__btn::after {
+                background-image: url("@img/icons/delete.svg");
+                opacity: 0.5;
+            }
+        }
+
+        &:hover {
+            outline-color: transparentize($blueLightest, 0.7);
+            background-color: transparentize($blueLighter, 0.8);
+
+            .add-gallery__btn {
+                background-color: $blueLightest;
+
+                &::after {
+                    opacity: 1;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    background-color: $blueLightest;
+                }
+            }
+        }
+
+        &:focus,
+        &:focus-visible {
+            outline-color: transparentize($blueLightest, 0.2);
+            background-color: transparentize($blueLighter, 0.8);
+
+            .add-gallery__btn {
+                background-color: $blueLightest;
+
+                &::after {
+                    opacity: 1;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    background-color: $blueLightest;
+                }
+            }
+        }
+    }
+    
+
+    &__img {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__btn {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(32);
+        height: rem(32);
+        border-radius: 50%;
+        background-color: transparentize($blueLightest, 0.5);
+        outline: none;
+        z-index: 1;
+        transition: background-color 0.2s;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: rem(19);
+            height: rem(19);
+            background-image: url("@img/icons/plus-white.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: 2;
+        }
+    }
+
+    &__item {
+        &:last-child {
+            width: 100%;
+
+            .add-gallery__img-box._acitve {
+                .add-gallery__img {
+                    display: none;
+                }
+    
+                .add-gallery__btn::after {
+                    background-image: url("@img/icons/plus-white.svg");
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @include tabletSmall {
+        &__list {    
+            grid-template-columns: repeat(auto-fill, 88px);
+            grid-gap: 9px;
+        }       
+        
+        &__img-box {
+            padding-bottom: 65.68%;
+        }
+    }
+
+    @include mobile {
+        &__img-box {
+            padding-bottom: 67.9%;
+        }
+    }
+}
