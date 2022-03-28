@@ -239,7 +239,24 @@ h4,
 
     &_grey {
         border: 1px solid $primaryLightest2;
-        background-color: $primaryLightest;
+        background-color: $primaryLightest8;
+
+        
+        &:hover {
+            border-color: $primaryLightest;
+            background-color: $primaryLightest9;
+        }
+
+        &:active {
+            border-color: $primaryLightest;
+            background-color: $primaryLightest10;
+        }
+
+        &:focus, &:focus-visible {
+            outline: none;
+            border-color: $redLight;
+            background-color: $primaryLightest10;            
+        }
     }
 
     &_blue {
@@ -431,6 +448,15 @@ h4,
     }
 }
 
+.counter { 
+    display: flex;
+    justify-content: flex-end;
+    font-size: rem(11);
+    line-height: rem(16);
+    font-weight: 400;
+    color: $primaryLightest;    
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -570,6 +596,12 @@ h4,
         }
     }
 
+    @include mobile {
+        &__item {
+            margin-bottom: rem(16);
+        }
+    }
+
     @include mobileSmall {
         &__add-btn {
             margin-left: 0;
@@ -659,15 +691,9 @@ h4,
         }
     }
 
-    &__counter-box {
+    &__counter {
         margin-top: rem(2);
         margin-left: auto;
-        display: flex;
-        justify-content: flex-end;
-        font-size: rem(11);
-        line-height: rem(16);
-        font-weight: 400;
-        color: $primaryLightest;
     }
 
     &__elem-box {
@@ -816,6 +842,9 @@ h4,
 }
 
 .add-gallery {
+    display: flex;
+    flex-direction: column;
+
     &__list {
         display: grid;
         grid-template-columns: repeat(auto-fill, 116px);
@@ -943,10 +972,15 @@ h4,
         }
     }
 
+    &__counter {
+        margin-bottom: rem(8);
+        margin-top: rem(4);
+        margin-left: auto;
+    }
+
     @include tabletSmall {
         &__list {    
             grid-template-columns: repeat(auto-fill, 88px);
-            grid-gap: 9px;
         }       
         
         &__img-box {
@@ -956,7 +990,7 @@ h4,
 
     @include mobile {
         &__img-box {
-            padding-bottom: 67.9%;
+            padding-bottom: 67.46%;
         }
     }
 }
