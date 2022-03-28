@@ -387,6 +387,18 @@ h6 {
   padding-left: 25px;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 h1,
 .h1 {
   font-size: 1.5rem;
@@ -885,6 +897,45 @@ h4,
   margin-left: auto;
   width: 100%;
   max-width: 11.5rem;
+}
+.form__files-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.form__textarea {
+  padding: 0.5rem;
+  min-height: 6.5625rem;
+  width: 100%;
+  border: 1px solid #E2E2E2;
+  border-radius: 0.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #1E1E1E;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: vertical;
+  background-color: #ffffff;
+}
+.form__textarea._disabled {
+  border-color: #E2E2E2;
+  background-color: #F4F4F4;
+}
+.form__textarea::placeholder {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.form__textarea:hover {
+  border-color: #C4C4C4;
+}
+.form__textarea:active {
+  border-color: #C4C4C4;
+}
+.form__textarea:focus, .form__textarea:focus-visible {
+  border-color: #2D99FD;
 }
 @media (max-width: 63.99875em) {
   .form .form__item-group_city {
