@@ -292,9 +292,9 @@
                                     <span class="counter__inc add-gallery__counter-inc">0</span><span class="counter__devider add-gallery__counter-devider">/</span><span class="counter__total add-gallery__counter-total">3</span>
                                 </div>
                                 
-                                <label class="form__files-label btn btn_grey add-gallery__files-label" for="addGalleryFiles">
+                                <label class="form__files-btn btn btn_grey add-gallery__files-label" for="addGalleryFiles">
                                     <span class="form__files-text add-gallery__files-text">Загрузить несколько фотографий</span>
-                                    <input class="form__files-input add-gallery__files-input visually-hidden" name="addGalleryFiles" id="addGalleryFiles" type="file" multiple>
+                                    <input class="form__files-input add-gallery__files-input visually-hidden" name="addGalleryFiles" id="addGalleryFiles" type="file" accept="image/*,image/jpeg" multiple>
                                 </label>
                             </div>
 
@@ -307,18 +307,14 @@
                                     <span class="counter__inc add-description__counter-inc">0</span><span class="counter__devider add-description__counter-devider">/</span><span class="counter__total add-description__counter-total">100</span>
                                 </div>
 
-                                <div class="add-description__btns btn__group">
-                                    
-                                   
+                                <div class="add-description__btns form__btn-wrap">
+                                    <button class="btn btn_grey form__btn form__btn-cancel" type="reset">Отмена</button>
+                                    <button class="btn btn_blue form__btn form__btn-submit" type="submit">Опубликовать</button>
                                 </div>                              
-                            </div>
+                            </div>                            
 
                         </div>
-
-
-
-
-
+                        <div class="error-text">Заполните все поля</div>
 
                     </form>
 
