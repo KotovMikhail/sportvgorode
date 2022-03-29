@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220329125103">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220329152335">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,22 +92,58 @@
 
 			<div class="content">
 				<div class="content__inner">
-					<div class="append">
-						<div class="append__main">
-							<h1 class="h1 append__title">Добавить</h1>
-							<p class="h2 append__descr">Спортивную арену</p>
-						</div>
-						<div class="append__img">
-							<button class="avatar-add-btn append__avatar" type="button">
-								<span class="avatar-add-btn__text">Загрузить логотип</span>
-							</button>
-							<!-- <picture><source srcset="img/Avatar.webp" type="image/webp"><img src="img/Avatar.png" alt=""></picture>
-                            Не совсем ясно, как будет работать установка аватара
-                            Если что, то переделаю, как надо -->
-						</div>
-					</div>
+
+
 
 					<form action="#" class="form content__form" method="POST">
+						<div class="choice">
+							<h1 class="h1 choice__title">Что вы хотите добавить?</h1>
+
+							<ul class="choice__list radio">
+								<li class="choice__item radio__item">
+									<input class="choice__input radio__input visually-hidden" type="radio" id="training" name="choice" checked disabled>
+									<label class="choice__label radio__label" for="training">
+										<span class="radio__text">Тренировка / Игра / Товарищеский матч</span>
+										<span class="radio__box"></span>
+									</label>
+								</li>
+								<li class="choice__item radio__item">
+									<input class="choice__input radio__input visually-hidden" type="radio" id="team" name="choice">
+									<label class="choice__label radio__label" for="team">
+										<span class="radio__text">Команда</span>
+										<span class="radio__box"></span>
+									</label>
+								</li>
+								<li class="choice__item radio__item">
+									<input class="choice__input radio__input visually-hidden" type="radio" id="sportsSchool" name="choice" disabled>
+									<label class="choice__label radio__label" for="sportsSchool">
+										<span class="radio__text">Спортивная школа</span>
+										<span class="radio__box"></span>
+									</label>
+								</li>
+							</ul>
+
+							<div class="choice__btns form__btn-wrap">
+								<button class="btn btn_grey form__btn form__btn_cancel choice__btn-cancel" type="reset">Отмена</button>
+								<button class="btn btn_blue form__btn form__btn_submit choice__btn-submit" type="submit">Продолжить</button>
+							</div>
+						</div>
+
+
+						<div class="append">
+							<div class="append__main">
+								<h2 class="h2 append__title">Добавить</h2>
+								<p class="h2 append__descr">Спортивную арену</p>
+							</div>
+							<div class="append__img">
+								<button class="avatar-add-btn append__avatar" type="button">
+									<span class="avatar-add-btn__text">Загрузить логотип</span>
+								</button>
+								<!-- <picture><source srcset="img/Avatar.webp" type="image/webp"><img src="img/Avatar.png" alt=""></picture>
+                                Не совсем ясно, как будет работать установка аватара
+                                Если что, то переделаю, как надо -->
+							</div>
+						</div>
 
 						<div class="form__list">
 							<div class="form__item add-arena">
@@ -319,15 +355,14 @@
 									<span class="counter__inc add-description__counter-inc">0</span><span class="counter__devider add-description__counter-devider">/</span><span class="counter__total add-description__counter-total">100</span>
 								</div>
 
-								<div class="add-description__btns form__btn-wrap">
-									<button class="btn btn_grey form__btn form__btn-cancel" type="reset">Отмена</button>
-									<button class="btn btn_blue form__btn form__btn-submit" type="submit">Опубликовать</button>
-								</div>
 							</div>
 
 						</div>
 						<div class="error-text">Заполните все поля</div>
-
+						<div class="add-description__btns form__btn-wrap">
+							<button class="btn btn_grey form__btn form__btn_cancel" type="reset">Отмена</button>
+							<button class="btn btn_blue form__btn form__btn_submit" type="submit">Опубликовать</button>
+						</div>
 					</form>
 
 
@@ -357,7 +392,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220329125103"></script>
+	<script src="js/app.min.js?_v=20220329152335"></script>
 </body>
 
 </html>

@@ -1,7 +1,5 @@
 // Заголовки, общие БЄМ блоки и проче...
 
-
-
 h1,
 .h1 {
     font-size: rem(24);
@@ -307,6 +305,7 @@ h4,
 
     &__title {
         margin-bottom: rem(8);
+        font-weight: $fw-medium;
     }
 
     @include mobileSmall {
@@ -676,6 +675,123 @@ h4,
         &__add-btn {
             margin-left: 0;
             max-width: 100%;
+        }
+    }
+}
+
+.choice {
+    &__list {
+        margin-bottom: rem(32);
+    }
+
+    &__title {
+        margin-bottom: rem(32);
+        font-weight: $fw-medium;
+    }
+
+    @include tablet {
+        &__list {
+            margin-bottom: rem(24);
+        }
+
+        &__title {
+            margin-bottom: rem(24);
+        }
+    }
+}
+
+.radio {
+    &__item {
+        margin-bottom: rem(16);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(10);
+        border-radius: rem(4);
+        border: 1px solid $primaryLightest;
+        cursor: pointer;
+
+        &:hover {
+            .radio__box {
+                border-color: $blueLighter;
+            }
+        }        
+
+        &:focus, &:focus-visible {
+            .radio__box {
+                outline: rem(2) solid $violetLightest;
+                border-color: $blueLighter;
+            }
+        }
+        
+    }
+
+    &__text {
+        margin-right: rem(16);
+        font-weight: $fw-regular;
+    }
+
+    &__box {
+        position: relative;
+        width: rem(20);
+        height: rem(20);
+        background-color: $whiteColor;
+        border: rem(2) solid $primaryLightest;
+        border-radius: 50%;
+        transition: background-color 0.2s, border-color 0.2s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: rem(10);
+            height: rem(10);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            border-radius: 50%;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+    }
+
+    &__input:checked + &__label {
+        .radio__box {
+            border-color: $blueLightest;
+
+            &::before {
+                background-color: $blueLightest;
+            }
+        }
+    }
+
+    &__input:checked[disabled] + &__label {
+        .radio__box {
+            border-color: $primaryLightest3;
+            background-color: $primaryLightest3;
+
+            &::before {
+                background-color: $primaryLightest1;
+            }
+        }
+    }
+
+    &__input[disabled] + &__label {
+        .radio__box {
+            border-color: $primaryLightest3;
+            background-color: $primaryLightest3;
+        }
+    }
+
+    &__input:invalid + &__label {
+        .radio__box {
+            border-color: $redLight;          
         }
     }
 }
