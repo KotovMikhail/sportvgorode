@@ -736,6 +736,10 @@ h4,
     &__text {
         margin-right: rem(16);
         font-weight: $fw-regular;
+        max-width: 296px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__box {
@@ -792,6 +796,17 @@ h4,
     &__input:invalid + &__label {
         .radio__box {
             border-color: $redLight;          
+        }
+    }
+
+    @include mobileSmall {
+        &__label {
+            padding: rem(9) rem(8);
+        }
+
+        &__text {
+            font-size: rem(14);
+            line-height: rem(20);
         }
     }
 }

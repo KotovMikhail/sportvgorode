@@ -1008,6 +1008,10 @@ h4,
 .radio__text {
   margin-right: 1rem;
   font-weight: 400;
+  max-width: 296px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .radio__box {
   position: relative;
@@ -1049,6 +1053,15 @@ h4,
 }
 .radio__input:invalid + .radio__label .radio__box {
   border-color: #FA2350;
+}
+@media (max-width: 29.99875em) {
+  .radio__label {
+    padding: 0.5625rem 0.5rem;
+  }
+  .radio__text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 .add-heading {
