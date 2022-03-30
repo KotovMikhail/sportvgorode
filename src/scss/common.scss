@@ -709,7 +709,7 @@ h4,
         }
     }
 
-    &__label {
+    &__label {       
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -717,6 +717,7 @@ h4,
         border-radius: rem(4);
         border: 1px solid $primaryLightest;
         cursor: pointer;
+        
 
         &:hover {
             .radio__box {
@@ -743,6 +744,7 @@ h4,
     }
 
     &__box {
+        flex-shrink: 0;
         position: relative;
         width: rem(20);
         height: rem(20);

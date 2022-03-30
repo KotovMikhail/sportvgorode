@@ -17,5 +17,6 @@ export const sprite = () => {
 			},
 		}
 		))
+		// .pipe(app.gulp.dest(`${app.path.build.svgicons}`));
 		.pipe(app.gulp.dest(`${app.path.build.images}`));
 }
