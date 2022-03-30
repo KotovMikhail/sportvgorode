@@ -715,17 +715,25 @@ h4,
         align-items: center;
         padding: rem(10);
         border-radius: rem(4);
-        border: 1px solid $primaryLightest;
+        background-color: $whiteColor;
+        border: 1px solid $primaryLightest2;
         cursor: pointer;
-        
+        transition: background-color .2s, border-color .2s;
+        outline: none;
+
 
         &:hover {
+            border-color: $primaryLightest;   
+
             .radio__box {
                 border-color: $blueLighter;
             }
         }        
 
         &:focus, &:focus-visible {
+            border-color: $blueLightest;
+            outline: none;
+            
             .radio__box {
                 outline: rem(2) solid $violetLightest;
                 border-color: $blueLighter;
@@ -796,6 +804,9 @@ h4,
     }
 
     &__input:invalid + &__label {
+        border-color: $redLight;
+        background-color: $redLight;
+
         .radio__box {
             border-color: $redLight;          
         }
