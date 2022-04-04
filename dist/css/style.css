@@ -716,7 +716,7 @@ h4,
   margin: auto;
   width: 5.625rem;
   height: 5.625rem;
-  background: url("../img/icons/avatar-empty.svg") no-repeat center;
+  background: url("../img/icons/icons.svg#avatar-empty") no-repeat center;
   background-size: cover;
   z-index: -1;
 }
@@ -1192,7 +1192,7 @@ h4,
   display: block;
 }
 .add-cover__img-box._acitve .add-cover__btn::after {
-  background-image: url("../img/icons/delete.svg");
+  background-image: url("../img/icons/icons.svg#delete");
   opacity: 0.5;
 }
 .add-cover__img-box:hover {
@@ -1253,7 +1253,7 @@ h4,
   transform: translate(-50%, -50%);
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url("../img/icons/plus-white.svg");
+  background-image: url("../img/icons/icons.svg#plus-white");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1302,7 +1302,7 @@ h4,
   display: block;
 }
 .add-gallery__img-box._acitve .add-gallery__btn::after {
-  background-image: url("../img/icons/delete.svg");
+  background-image: url("../img/icons/icons.svg#delete");
   opacity: 0.5;
 }
 .add-gallery__img-box:hover {
@@ -1363,7 +1363,7 @@ h4,
   transform: translate(-50%, -50%);
   width: 1.1875rem;
   height: 1.1875rem;
-  background-image: url("../img/icons/plus-white.svg");
+  background-image: url("../img/icons/icons.svg#plus-white");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1376,7 +1376,7 @@ h4,
   display: none;
 }
 .add-gallery__item:last-child .add-gallery__img-box._acitve .add-gallery__btn::after {
-  background-image: url("../img/icons/plus-white.svg");
+  background-image: url("../img/icons/icons.svg#plus-white");
   opacity: 1;
 }
 .add-gallery__counter {

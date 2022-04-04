@@ -369,7 +369,7 @@ h4,
 			margin: auto;
 			width: rem(90);
 			height: rem(90);
-			background: url("@img/icons/avatar-empty.svg") no-repeat center;
+			background: url("@img/icons/icons.svg#avatar-empty") no-repeat center;
 			background-size: cover;
 			z-index: -1;
 		}
@@ -954,8 +954,8 @@ h4,
 				display: block;
 			}
 
-			.add-cover__btn::after {
-				background-image: url("@img/icons/delete.svg");
+			.add-cover__btn::after {		
+				background-image: url("@img/icons/icons.svg#delete");
 				opacity: 0.5;
 			}
 		}
@@ -1030,8 +1030,8 @@ h4,
 			left: 50%;
 			transform: translate(-50%, -50%);
 			width: rem(24);
-			height: rem(24);
-			background-image: url("@img/icons/plus-white.svg");
+			height: rem(24);	
+			background-image: url("@img/icons/icons.svg#plus-white");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
@@ -1085,8 +1085,8 @@ h4,
 				display: block;
 			}
 
-			.add-gallery__btn::after {
-				background-image: url("@img/icons/delete.svg");
+			.add-gallery__btn::after {		
+				background-image: url("@img/icons/icons.svg#delete");
 				opacity: 0.5;
 			}
 		}
@@ -1162,7 +1162,7 @@ h4,
 			transform: translate(-50%, -50%);
 			width: rem(19);
 			height: rem(19);
-			background-image: url("@img/icons/plus-white.svg");
+			background-image: url("@img/icons/icons.svg#plus-white");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
@@ -1180,7 +1180,7 @@ h4,
 				}
 
 				.add-gallery__btn::after {
-					background-image: url("@img/icons/plus-white.svg");
+					background-image: url("@img/icons/icons.svg#plus-white");
 					opacity: 1;
 				}
 			}
