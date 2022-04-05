@@ -60,7 +60,7 @@ h4,
 
 	.content {
 		flex: 0 1 rem(552);
-		padding: rem(32);
+		padding: rem(24) rem(32);
 		background-color: $whiteColor;
 		border-radius: $borderRadius;
 	}
@@ -453,7 +453,15 @@ h4,
 			width: rem(73);
 			height: rem(65);
 			background: url("@img/icons/icons.svg#avatar-team") no-repeat center;
+		}
+	}
 
+	@include mobileSmall {
+		&__btn-text {
+			&::before {
+				width: rem(48);
+				height: rem(43);
+			}
 		}
 	}
 
@@ -649,7 +657,7 @@ h4,
 	}
 
 	@include laptop {
-		.form__item-group_city {
+		.form__item-group {
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: flex-start;
@@ -888,7 +896,13 @@ h4,
 }
 
 .add-arena-address {
-	.form__input {
+	&__input {
+		width: 100%;
+	}
+}
+
+.add-team-name {
+	&__input {
 		width: 100%;
 	}
 }
@@ -1059,7 +1073,7 @@ h4,
 }
 
 .error-text {
-	display: none;
+	display: block;
 	margin-top: rem(3);
 	margin-left: auto;
 	font-size: rem(11);

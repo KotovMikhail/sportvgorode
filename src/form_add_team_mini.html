@@ -112,16 +112,16 @@
 						</div>
 
 						<div class="form__list">
-							<div class="form__item add-arena-name">
-								<p class="add-heading add-arena-name__heading">Название команды</p>
-								<input class="form__input form__input_arena-name" type="text" name="arenaName" placeholder="Хоккейный клуб «Харламов»" required />
-								<div class="error-text">Арена с таким названием уже есть на сайте</div>
+							<div class="form__item add-team-name">
+								<p class="add-heading add-team-name__heading">Название команды</p>
+								<input class="form__input add-team-name__input" type="text" name="teamName" placeholder="Хоккейный клуб «Харламов»" required />
+								<div class="error-text">Команда с таким названием уже существует</div>
 							</div>
 
-							<div class="form__item add-arena">
-								<p class="add-heading add-complex__heading">Вид спорта</p>
+							<div class="form__item add-sport-type">
+								<p class="add-heading add-sport-type__heading">Вид спорта</p>
 
-								<select id="selectComplex" class="add-complex__select">
+								<select id="selectSportType" class="add-sport-type__select">
 									<option value="SportType1">Хоккей</option>
 									<option value="SportType2">Вид спорта 2</option>
 									<option value="SportType3">Вид спорта 3</option>
@@ -133,7 +133,7 @@
 								<div class="error-text">Укажите вид спорта</div>
 							</div>
 
-							<div class="form__item form__item-group form__item-group_city">
+							<div class="form__item form__item-group">
 								<div class="form__item-col form__item-col_left">
 									<div class="add-city">
 										<p class="add-heading add-city__heading">Город</p>
