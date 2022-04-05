@@ -716,9 +716,9 @@ h4,
   margin: auto;
   width: 5.625rem;
   height: 5.625rem;
-  background: url("../img/icons/icons.svg#avatar-empty") no-repeat center;
+  background: url("../img/icons/icons.svg#avatar-arena") no-repeat center;
   background-size: cover;
-  z-index: -1;
+  z-index: -2;
 }
 .avatar-add-btn__text::after {
   content: "";
@@ -775,6 +775,12 @@ h4,
     width: 3.875rem;
     height: 3.875rem;
   }
+}
+
+.append-team__btn-text::before {
+  width: 4.5625rem;
+  height: 4.0625rem;
+  background: url("../img/icons/icons.svg#avatar-team") no-repeat center;
 }
 
 .counter {
@@ -1276,6 +1282,36 @@ h4,
   text-align: right;
 }
 
+.error-block {
+  margin-bottom: 2rem;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 0.5rem;
+  background-color: #FFF2F4;
+}
+.error-block__icon-error-red {
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.error-block__text {
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+@media (max-width: 47.99875em) {
+  .error-block {
+    margin-bottom: 1.5rem;
+  }
+  .error-block__text {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
 .add-gallery {
   display: flex;
   flex-direction: column;
@@ -1438,6 +1474,20 @@ h4,
 }
 @media (max-width: 47.99875em) {
   .warning__list {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.success__title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+.success__btn {
+  margin: 0 auto;
+  min-width: 8.625rem;
+}
+@media (max-width: 47.99875em) {
+  .success__title {
     margin-bottom: 1.5rem;
   }
 }

@@ -369,9 +369,9 @@ h4,
 			margin: auto;
 			width: rem(90);
 			height: rem(90);
-			background: url("@img/icons/icons.svg#avatar-empty") no-repeat center;
+			background: url("@img/icons/icons.svg#avatar-arena") no-repeat center;
 			background-size: cover;
-			z-index: -1;
+			z-index: -2;
 		}
 
 		&::after {
@@ -445,6 +445,18 @@ h4,
 			}
 		}
 	}
+}
+
+.append-team {
+	&__btn-text {
+		&::before {
+			width: rem(73);
+			height: rem(65);
+			background: url("@img/icons/icons.svg#avatar-team") no-repeat center;
+
+		}
+	}
+
 }
 
 .counter {
@@ -954,7 +966,7 @@ h4,
 				display: block;
 			}
 
-			.add-cover__btn::after {		
+			.add-cover__btn::after {
 				background-image: url("@img/icons/icons.svg#delete");
 				opacity: 0.5;
 			}
@@ -1030,7 +1042,7 @@ h4,
 			left: 50%;
 			transform: translate(-50%, -50%);
 			width: rem(24);
-			height: rem(24);	
+			height: rem(24);
 			background-image: url("@img/icons/icons.svg#plus-white");
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -1055,6 +1067,36 @@ h4,
 	font-weight: $fw-regular;
 	color: $redLightest;
 	text-align: right;
+}
+
+.error-block {
+	margin-bottom: rem(32);
+	padding: rem(12) rem(8);
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	border-radius: rem(8);
+	background-color: $redLightest2;
+
+	&__icon-error-red {
+		flex-shrink: 0;
+		margin-right: rem(8);
+		width: rem(24);
+		height: rem(24);
+	}
+	&__text {
+		font-size: rem(13);
+		line-height: rem(24);
+		font-weight: $fw-regular;
+	}
+
+	@include mobile {
+		margin-bottom: rem(24);
+		&__text {
+			font-size: rem(12);
+			line-height: rem(16);
+		}
+	}
 }
 
 .add-gallery {
@@ -1085,7 +1127,7 @@ h4,
 				display: block;
 			}
 
-			.add-gallery__btn::after {		
+			.add-gallery__btn::after {
 				background-image: url("@img/icons/icons.svg#delete");
 				opacity: 0.5;
 			}
@@ -1223,7 +1265,7 @@ h4,
 	}
 
 	&__list {
-		margin-bottom: rem(32)
+		margin-bottom: rem(32);
 	}
 
 	&__item {
@@ -1236,13 +1278,13 @@ h4,
 		font-weight: $fw-regular;
 
 		&::before {
-			content: '';
+			content: "";
 			border-radius: 50%;
 			position: absolute;
 			width: rem(4);
 			height: rem(4);
 			top: rem(10);
-			left: rem(4);	
+			left: rem(4);
 			background-color: $primaryLighter;
 		}
 
@@ -1260,5 +1302,24 @@ h4,
 			margin-bottom: rem(24);
 		}
 	}
-	
 }
+
+.success {
+	&__title {
+		margin-bottom: 32px;
+		text-align: center;
+	}
+
+	&__btn {
+		margin: 0 auto;
+		min-width: rem(138);
+	}
+
+	@include mobile {
+		&__title {
+			margin-bottom: rem(24);
+		}
+	}
+}
+
+// Form Add Team Mini
