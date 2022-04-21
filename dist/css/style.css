@@ -188,6 +188,22 @@ h6 {
   width: 100%;
 }
 
+.selectric-append__descr .selectric {
+  border: 0;
+  padding: 0;
+}
+.selectric-append__descr .selectric .label {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+@media (max-width: 29.99875em) {
+  .selectric-append__descr .selectric .label {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
 .selectric {
   position: relative;
   width: 100%;
@@ -654,8 +670,12 @@ h4,
 }
 
 .append {
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
+}
+.append__main_full-width {
+  flex-grow: 1;
 }
 .append__title {
   margin-bottom: 0.5rem;
@@ -777,12 +797,18 @@ h4,
   }
 }
 
+.append-team__main {
+  padding-right: 2.875rem;
+}
 .append-team__btn-text::before {
   width: 4.5625rem;
   height: 4.0625rem;
   background: url("../img/icons/icons.svg#avatar-team") no-repeat center;
 }
 @media (max-width: 29.99875em) {
+  .append-team__main {
+    padding-right: 1rem;
+  }
   .append-team__btn-text::before {
     width: 3rem;
     height: 2.6875rem;

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Форма</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220421150432">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 style="color: #ffffff;text-align: center;">Header</h1>
+			</div>
+		</header>
+		<main class="page __container">
+
+			<div class="left">
+				<!--<svg class="icon_avatar-empty" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="img/icons/icons.svg#avatar-empty"></use>
+                </svg>-->
+
+
+				<nav class="nav">
+					<div class="nav__wrap">
+						<h3 class="nav__heading">Моя страница</h3>
+						<ul class="nav__list">
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Избранное</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Арены</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Спортшколы</span><span class="nav__item-counter sub-nav__item-counter">1</span></li>
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Команды</span><span class="nav__item-counter sub-nav__item-counter">2</span></li>
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Тренировки</span><span class="nav__item-counter sub-nav__item-counter">3</span></li>
+								</ul>
+							</li>
+
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Мой профиль</span>
+									<span class="nav__item-counter sub-nav__item-counter">1</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item">
+										<span class="sub-nav__item-text">Уведомления</span><span class="nav__item-counter sub-nav__item-counter">1</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
+					<div class="nav__wrap">
+						<h3 class="nav__heading">Управление</h3>
+						<ul class="nav__list">
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Арены</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">ЛД Морозово</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+								</ul>
+							</li>
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Спортшколы</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">Hockey Chance</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+								</ul>
+							</li>
+							<li class="nav__item">
+								<div class="nav__title-wrap">
+									<span class="nav__title">Команды</span>
+									<span class="nav__item-counter">5</span>
+								</div>
+								<ul class="sub-nav__list">
+									<li class="sub-nav__item"><span class="sub-nav__item-text">ХК Харламов</span><span class="nav__item-counter sub-nav__item-counter">4</span></li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+					<button class="btn btn_blue nav__btn" type="button">Добавить</button>
+				</nav>
+			</div>
+
+			<div class="content">
+				<div class="content__inner">
+
+					<form action="#" class="form content__form" method="POST">
+						<div class="append">
+							<div class="append__main">
+								<h2 class="append__title">Добавить</h2>
+								<p class="h2 append__descr">Спортивную арену</p>
+							</div>
+							<div class="append__img">
+								<button class="avatar-add-btn append__avatar" type="button">
+									<span class="avatar-add-btn__text">Загрузить логотип</span>
+								</button>
+								<!-- <picture><source srcset="img/Avatar.webp" type="image/webp"><img src="img/Avatar.png" alt=""></picture>
+                                Не совсем ясно, как будет работать установка аватара
+                                Если что, то переделаю, как надо -->
+							</div>
+						</div>
+
+						<div class="form__list">
+							<div class="form__item add-arena">
+								<p class="add-heading add-complex__heading">Выберите тип</p>
+
+								<select id="selectComplex" class="add-complex__select">
+									<option value="SportComplex1">Спортивный комплекс 1</option>
+									<option value="SportComplex2">Спортивный комплекс 2</option>
+									<option value="SportComplex3">Спортивный комплекс 3</option>
+									<option value="SportComplex4">Спортивный комплекс 4</option>
+									<option value="SportComplex5">Спортивный комплекс 5</option>
+									<option value="SportComplex6">Спортивный комплекс 6</option>
+									<option value="SportComplex7">Спортивный комплекс 7</option>
+								</select>
+								<div class="error-text">Укажите тип площадки</div>
+							</div>
+
+							<div class="form__item add-official">
+								<p class="add-heading add-official__heading">Вы официальный представитель?</p>
+								<select id="selectOfficial" class="add-official__select">
+									<option value="Yes">Да</option>
+									<option value="No">Нет</option>
+								</select>
+
+							</div>
+
+							<div class="form__item form__item-group form__item-group_city">
+								<div class="form__item-col form__item-col_left">
+									<div class="add-city">
+										<p class="add-heading add-city__heading">Город</p>
+										<select id="selectCity" class="add-city__select">
+											<option value="Moscow">Москва</option>
+											<option value="Sankt-Peterburg">Санкт-Петербург</option>
+											<option value="San-Francisco">Сан-Франциско</option>
+											<option value="Antananirivu">Антананариву</option>
+											<option value="Mariupol">Мариуполь</option>
+										</select>
+										<div class="error-text">Укажите город</div>
+									</div>
+								</div>
+
+								<div class="form__item-col form__item-col_right">
+									<p class="add-heading add-phone__heading">Телефон</p>
+									<div class="form__input-phone-box form__input-phone-box_plus">
+										<input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
+										<button class="form__input-add-btn form__input-add-btn_plus" type="button"></button>
+									</div>
+
+									<div class="form__input-phone-box form__input-phone-box_minus">
+										<div class="form__input form__input_phone">+7 (925) 838 63 53</div>
+										<button class="form__input-add-btn form__input-add-btn_minus" type="button"></button>
+									</div>
+									<div class="error-text">Укажите телефон</div>
+								</div>
+							</div>
+
+							<div class="form__item add-arena-name">
+								<p class="add-heading add-arena-name__heading">Название арены</p>
+								<input class="form__input form__input_arena-name" type="text" name="arenaName" placeholder="Название арены" required />
+								<div class="error-text">Арена с таким названием уже есть на сайте</div>
+							</div>
+
+							<div class="form__item add-arena-address">
+								<p class="add-heading add-arena-address__heading">Адрес</p>
+								<input class="form__input add-arena-address__input" type="text" name="arenaAddress" placeholder="Адрес" required />
+								<div class="error-text">Такого адреса нет на карте вашего города</div>
+							</div>
+
+							<div class="form__item add-metro">
+								<p class="add-heading add-metro__heading">Ближайшее метро</p>
+
+								<select id="selectMetro" class="add-metro__select">
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+									<option value="Sportivnaya">Спортивная</option>
+								</select>
+								<div class="counter add-metro__counter">
+									<span class="counter__inc add-metro__counter-inc">0</span><span class="counter__devider add-metro__counter-devider">/</span><span class="counter__total add-metro__counter-total">3</span>
+								</div>
+								<div class="add-metro__elem-box">
+									<span class="add-metro__elem">Спортивная</span>
+									<span class="add-metro__elem">Спортивная</span>
+								</div>
+								<div class="error-text">Укажите метро</div>
+
+								<button class="btn btn_blue form__add-btn _disabled" type="button">Добавить</button>
+
+							</div>
+
+							<div class="form__item add-cover">
+								<p class="add-heading add-cover__heading">Обложка</p>
+
+								<div class="add-cover__img-box">
+									<button class="add-cover__btn" type="button"></button>
+									<picture><source srcset="img/cover.webp" type="image/webp"><img class="add-cover__img" src="img/cover.jpg" alt=""></picture>
+								</div>
+							</div>
+
+
+							<div class="form__item add-gallery">
+								<p class="add-heading add-gallery__heading">Галерея</p>
+
+
+								<ul class="add-gallery__list">
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image1.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image1.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image1.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image1.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box _acitve">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
+										</div>
+									</li>
+
+									<li class="add-gallery__item">
+										<div class="add-gallery__img-box">
+											<button class="add-gallery__btn" type="button"></button>
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
+										</div>
+									</li>
+								</ul>
+								<div class="counter add-gallery__counter">
+									<span class="counter__inc add-gallery__counter-inc">0</span><span class="counter__devider add-gallery__counter-devider">/</span><span class="counter__total add-gallery__counter-total">3</span>
+								</div>
+
+								<label class="form__files-btn btn btn_grey add-gallery__files-label" for="addGalleryFiles">
+									<span class="form__files-text add-gallery__files-text">Загрузить несколько фотографий</span>
+									<input class="form__files-input add-gallery__files-input visually-hidden" name="addGalleryFiles" id="addGalleryFiles" type="file" accept="image/*,image/jpeg" multiple>
+								</label>
+							</div>
+
+							<div class="form__item add-description">
+								<p class="add-heading add-description__heading">Описание</p>
+
+								<textarea class="form__textarea add-description__textarea _disabled" name="addDescription" id="addDescription" cols="30" rows="3" placeholder="Введите текст..."></textarea>
+
+								<div class="counter add-description__counter">
+									<span class="counter__inc add-description__counter-inc">0</span><span class="counter__devider add-description__counter-devider">/</span><span class="counter__total add-description__counter-total">100</span>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="error-text">Заполните все поля</div>
+						<div class="add-description__btns form__btn-wrap">
+							<button class="btn btn_grey form__btn form__btn_cancel" type="reset">Отмена</button>
+							<button class="btn btn_blue form__btn form__btn_submit" type="submit">Опубликовать</button>
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+
+			<div class="right">
+				Правый
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<h1 style="color: #ffffff; text-align: center;">Footer</h1>
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="js/app.min.js?_v=20220421150432"></script>
+</body>
+
+</html>

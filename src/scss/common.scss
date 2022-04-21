@@ -302,15 +302,23 @@ h4,
 }
 
 .append {
+	margin-bottom: rem(16);
 	display: flex;
 	justify-content: space-between;
+
+	&__main {
+		&_full-width {
+			flex-grow: 1;
+		}
+	}
 
 	&__title {
 		margin-bottom: rem(8);
 		font-weight: $fw-medium;
 	}
 
-	@include mobileSmall {
+	@include mobileSmall {		
+
 		&__title {
 			margin-bottom: rem(4);
 		}
@@ -448,6 +456,10 @@ h4,
 }
 
 .append-team {
+	&__main {
+		padding-right: rem(46);
+	}
+
 	&__btn-text {
 		&::before {
 			width: rem(73);
@@ -456,7 +468,15 @@ h4,
 		}
 	}
 
+	@include mobile {
+
+	}
+
 	@include mobileSmall {
+		&__main {
+			padding-right: rem(16);
+		}
+
 		&__btn-text {
 			&::before {
 				width: rem(48);
@@ -1336,4 +1356,4 @@ h4,
 	}
 }
 
-// Form Add Team Mini
+// Form Add Training

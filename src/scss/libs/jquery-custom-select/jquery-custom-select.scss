@@ -7,6 +7,24 @@
   width: 100%;
 }
 
+.selectric-append__descr {
+	.selectric {
+		border: 0;
+		padding: 0;
+	}
+
+	.selectric .label {
+		font-size: rem(24);
+		line-height: rem(32);
+		font-weight: $fw-light;
+	
+		@include mobileSmall {
+			font-size: rem(18);
+			line-height: rem(24);
+		}
+	}
+}
+
 .selectric {
   position: relative;
   width: 100%;
