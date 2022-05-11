@@ -526,8 +526,33 @@ h4,
 		justify-content: space-between;
 	}
 
+	&__item-title {
+		margin-bottom: rem(16);
+	}
+
 	&__item-col {
 		width: 100%;
+
+		&_2-cols {
+			display: flex;
+			justify-content: space-between;
+
+			.add-time-type__inner {
+				display: flex;
+			}
+
+			.form__item-sub-col {
+					width: 50%;
+
+				&_left {
+					
+				}
+
+				&_right {
+					margin-left: rem(24);
+				}
+			}
+		}
 
 		&_left {
 			max-width: rem(232);
@@ -535,6 +560,16 @@ h4,
 
 		&_right {
 			margin-left: rem(24);
+		}
+
+		.add-time-type {
+			width: 100%;
+			display: flex;
+			flex-direction: column;	
+
+			.add-time-type__heading {
+				width: 100%;
+			}
 		}
 	}
 
@@ -613,6 +648,10 @@ h4,
 		border-radius: rem(4);
 		transition: border-color 0.2s;
 		outline: 0;
+
+		&.error {
+			border-color: $redLightest;	
+		}
 
 		&::placeholder {
 			color: $primary;
@@ -717,6 +756,20 @@ h4,
 		&__add-btn {
 			margin-left: 0;
 			max-width: 100%;
+		}
+	}
+}
+
+.add-time-to-type {
+	.selectric {
+		position: relative;
+
+		&::before {
+			content: '-';
+			position: absolute;
+			top: 50%;
+			left: rem(-16);
+			transform: translateY(-50%);
 		}
 	}
 }
@@ -919,6 +972,17 @@ h4,
 	&__input {
 		width: 100%;
 	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__btn {
+		margin-left: rem(24);
+		min-height: rem(40);
+	}
 }
 
 .add-team-name {
@@ -926,6 +990,7 @@ h4,
 		width: 100%;
 	}
 }
+
 
 .add-metro {
 	display: flex;
@@ -1092,6 +1157,8 @@ h4,
 	}
 }
 
+
+
 .error-text {
 	display: block;
 	margin-top: rem(3);
@@ -1106,11 +1173,16 @@ h4,
 .error-block {
 	margin-bottom: rem(32);
 	padding: rem(12) rem(8);
+	width: 100%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
 	border-radius: rem(8);
 	background-color: $redLightest2;
+
+	strong {
+		font-weight: 700;
+	}
 
 	&__icon-error-red {
 		flex-shrink: 0;

@@ -147,7 +147,7 @@
 											<option value="SportType6">Вид спорта 6</option>
 											<option value="SportType7">Вид спорта 7</option>
 										</select>
-										<div class="error-text">Укажите вид спорта</div>
+										<div class="error-text">Выберите из списка</div>
 									</div>
 								</div>
 
@@ -163,23 +163,135 @@
 											<option value="ArenaType6">Тип площадки 6</option>
 											<option value="ArenaType7">Тип площадки 7</option>
 										</select>
-										<div class="error-text">Укажите тип площадки</div>
+										<div class="error-text">Укажите вид площадки</div>
 									</div>
 								</div>
 							</div>
+
+							<div class="form__item form__item-group">
+								<div class="form__item-col form__item-col_left form__item-col_2-cols">
+									<div class="form__item-sub-col form__item-sub-col_left add-gender-type">
+										<p class="add-heading add-gender-type__heading">Пол</p>
+										<select id="selectGenderType" class="add-gender-type__select">
+											<option value="GenderType1">М/Ж</option>
+											<option value="GenderType2">Мужской</option>
+											<option value="GenderType3">Женский</option>
+										</select>
+										<div class="error-text">Заполните поле</div>
+									</div>
+									<div class="form__item-sub-col form__item-sub-col_right add-age-type">
+										<p class="add-heading add-age-type__heading">Возраст</p>
+										<select id="selectAgeType" class="add-age-type__select">
+											<option value="AgeType1">18+</option>
+											<option value="AgeType2">19+</option>
+											<option value="AgeType3">20+</option>
+										</select>
+										<div class="error-text">Укажите возраст</div>
+									</div>
+								</div>
+
+								<div class="form__item-col form__item-col_right form__item-col_2-cols">								
+									<div class="add-time-type">
+										<p class="add-heading add-time-type__heading">Время проведения</p>
+										<div class="add-time-type__inner">
+											<div class="form__item-sub-col form__item-sub-col_left add-time-from-type">
+												<select id="selectTimeFromType" class="add-time-from-type__select error">
+													<option value="TimeFromType1">00:00</option>
+													<option value="TimeFromType2">01:00</option>
+													<option value="TimeFromType3">02:00</option>
+												</select>
+												<div class="error-text">Укажите время</div>
+											</div>
+											<!--<span class="add-time-type-hyphen">-</span>-->
+											<div class="form__item-sub-col form__item-sub-col_right add-time-to-type">
+												<select id="selectTimeToType" class="add-time-to-type__select">
+													<option value="TimeToType1">00:00</option>
+													<option value="TimeToType2">01:00</option>
+													<option value="TimeToType3">02:00</option>
+												</select>
+												<div class="error-text">Укажите время</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="form__item form__item-group">
+								<div class="form__item-col form__item-col_left">
+									<div class="add-event-type">
+										<p class="add-heading add-event-type__heading">Тип мероприятия</p>
+										<select id="selectEventType" class="add-event-type__select">
+											<option value="EventType1">Регулярное</option>
+											<option value="EventType2">Нерегулярное</option>
+			
+										</select>
+										<div class="error-text">Выберите тип мероприятия</div>
+									</div>
+								</div>
+
+								<div class="form__item-col form__item-col_right">
+									<div class="add-day-type">
+										<p class="add-heading add-day-type__heading">День недели</p>
+										<select id="selectDayType" class="add-day-type__select">
+											<option value="SportType1">Вторник</option>
+											<option value="DayType2">Тип площадки 2</option>
+											<option value="DayType3">Тип площадки 3</option>
+											<option value="DayType4">Тип площадки 4</option>
+											<option value="DayType5">Тип площадки 5</option>
+											<option value="DayType6">Тип площадки 6</option>
+											<option value="DayType7">Тип площадки 7</option>
+										</select>
+										<div class="error-text">Укажите день</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="error-block">
+								<svg class="error-block__icon-error-red" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<use xlink:href="img/icons/icons.svg#error-red"></use>
+								</svg>
+								<p class="error-block__text">*Регулярные мероприятия заносятся в календарь событий на выбранный день каждой недели месяца. <strong>Срок публикации – 1 месяц.</strong> У регулярных событий есть функция разового переноса / отмены.</p>
+							</div>
+
+							<div class="form__item">
+									<h3 class="form__item-title">Место проведения</h3>
+									<div class="add-city">
+										<p class="add-heading add-city__heading">Город</p>
+										<select id="selectCity" class="add-city__select">
+											<option value="Moscow">Москва</option>
+											<option value="Sankt-Peterburg">Санкт-Петербург</option>
+											<option value="San-Francisco">Сан-Франциско</option>
+											<option value="Antananirivu">Антананариву</option>
+											<option value="Mariupol">Мариуполь</option>
+										</select>
+										<div class="error-text">Укажите город</div>
+									</div>
+
+									<div class="add-arena-address">
+										<p class="add-heading add-arena-address__heading">Спортивная арена / площадка</p>
+										<div class="add-arena-address__inner">
+											<input class="form__input add-arena-address__input" type="text" name="arenaAddress" placeholder="Адрес" required="">
+											<button class="btn btn_blue add-arena-address__btn" type="button">Добавить</button>
+										</div>
+										<div class="error-text">Такого адреса нет на карте вашего города</div>
+									</div>
+							</div>
 						
-							<div class="form__item add-arena">
-								<p class="add-heading add-complex__heading">Выберите тип</p>
-								<select id="selectComplex" class="add-complex__select">
-									<option value="SportComplex1">Спортивный комплекс 1</option>
-									<option value="SportComplex2">Спортивный комплекс 2</option>
-									<option value="SportComplex3">Спортивный комплекс 3</option>
-									<option value="SportComplex4">Спортивный комплекс 4</option>
-									<option value="SportComplex5">Спортивный комплекс 5</option>
-									<option value="SportComplex6">Спортивный комплекс 6</option>
-									<option value="SportComplex7">Спортивный комплекс 7</option>
-								</select>
-								<div class="error-text">Укажите тип площадки</div>
+							<div class="form__item">
+								<div class="add-arena">
+									<p class="add-heading add-complex__heading">Выберите тип</p>
+									<select id="selectComplex" class="add-complex__select">
+										<option value="SportComplex1">Спортивный комплекс 1</option>
+										<option value="SportComplex2">Спортивный комплекс 2</option>
+										<option value="SportComplex3">Спортивный комплекс 3</option>
+										<option value="SportComplex4">Спортивный комплекс 4</option>
+										<option value="SportComplex5">Спортивный комплекс 5</option>
+										<option value="SportComplex6">Спортивный комплекс 6</option>
+										<option value="SportComplex7">Спортивный комплекс 7</option>
+									</select>
+									<div class="error-text">Укажите тип площадки</div>
+								</div>		
 							</div>
 
 							<div class="form__item add-official">
@@ -191,7 +303,7 @@
 
 							</div>
 
-							<div class="form__item form__item-group form__item-group_city">
+							<!--<div class="form__item form__item-group form__item-group_city">
 								<div class="form__item-col form__item-col_left">
 									<div class="add-city">
 										<p class="add-heading add-city__heading">Город</p>
@@ -209,7 +321,7 @@
 								<div class="form__item-col form__item-col_right">
 									<p class="add-heading add-phone__heading">Телефон</p>
 									<div class="form__input-phone-box form__input-phone-box_plus">
-										<input class="form__input form__input_phone" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
+										<input class="form__input form__input_phone error" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
 										<button class="form__input-add-btn form__input-add-btn_plus" type="button"></button>
 									</div>
 
@@ -219,7 +331,7 @@
 									</div>
 									<div class="error-text">Укажите телефон</div>
 								</div>
-							</div>
+							</div>-->
 
 							<div class="form__item add-arena-name">
 								<p class="add-heading add-arena-name__heading">Название арены</p>

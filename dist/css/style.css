@@ -218,7 +218,6 @@ h6 {
   transition: border-color 0.2s;
   text-align: left;
   cursor: pointer;
-  overflow: hidden;
 }
 .selectric .label {
   display: block;
@@ -336,7 +335,7 @@ h6 {
 .selectric-items {
   display: none;
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: 100%;
   left: 0;
   background: #ffffff;
   z-index: 0;
@@ -401,6 +400,10 @@ h6 {
 }
 .selectric-items .selectric-group li {
   padding-left: 25px;
+}
+
+.selectric-error .selectric {
+  border-color: #FF5D78;
 }
 
 h1,
@@ -849,14 +852,38 @@ h4,
   align-items: flex-start;
   justify-content: space-between;
 }
+.form__item-title {
+  margin-bottom: 1rem;
+}
 .form__item-col {
   width: 100%;
+}
+.form__item-col_2-cols {
+  display: flex;
+  justify-content: space-between;
+}
+.form__item-col_2-cols .add-time-type__inner {
+  display: flex;
+}
+.form__item-col_2-cols .form__item-sub-col {
+  width: 50%;
+}
+.form__item-col_2-cols .form__item-sub-col_right {
+  margin-left: 1.5rem;
 }
 .form__item-col_left {
   max-width: 14.5rem;
 }
 .form__item-col_right {
   margin-left: 1.5rem;
+}
+.form__item-col .add-time-type {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form__item-col .add-time-type .add-time-type__heading {
+  width: 100%;
 }
 .form__input-phone-box {
   display: flex;
@@ -918,6 +945,9 @@ h4,
   border-radius: 0.25rem;
   transition: border-color 0.2s;
   outline: 0;
+}
+.form__input.error {
+  border-color: #FF5D78;
 }
 .form__input::placeholder {
   color: #303030;
@@ -1005,6 +1035,17 @@ h4,
     margin-left: 0;
     max-width: 100%;
   }
+}
+
+.add-time-to-type .selectric {
+  position: relative;
+}
+.add-time-to-type .selectric::before {
+  content: "-";
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
 }
 
 .choice__list {
@@ -1165,6 +1206,15 @@ h4,
 .add-arena-address__input {
   width: 100%;
 }
+.add-arena-address__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-arena-address__btn {
+  margin-left: 1.5rem;
+  min-height: 2.5rem;
+}
 
 .add-team-name__input {
   width: 100%;
@@ -1321,11 +1371,15 @@ h4,
 .error-block {
   margin-bottom: 2rem;
   padding: 0.75rem 0.5rem;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   border-radius: 0.5rem;
   background-color: #FFF2F4;
+}
+.error-block strong {
+  font-weight: 700;
 }
 .error-block__icon-error-red {
   flex-shrink: 0;
