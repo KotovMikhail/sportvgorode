@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220511165216">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220512155230">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -266,9 +266,9 @@
 								<p class="error-block__text">*Регулярные мероприятия заносятся в календарь событий на выбранный день каждой недели месяца. <strong>Срок публикации – 1 месяц.</strong> У регулярных событий есть функция разового переноса / отмены.</p>
 							</div>
 
-							<div class="form__item">
-								<h3 class="form__item-title">Место проведения</h3>
-								<div class="add-city">
+							<div class="form__items">
+								<h3 class="form__item-title upper-case">Место проведения</h3>
+								<div class="form__item add-city">
 									<p class="add-heading add-city__heading">Город</p>
 									<select id="selectCity" class="add-city__select">
 										<option value="Moscow">Москва</option>
@@ -280,14 +280,32 @@
 									<div class="error-text">Укажите город</div>
 								</div>
 
-								<div class="add-arena-address">
+								<div class="form__item add-arena-address">
 									<p class="add-heading add-arena-address__heading">Спортивная арена / площадка</p>
-									<div class="add-arena-address__inner">
+									<div class="add-arena-address__box">
 										<input class="form__input add-arena-address__input" type="text" name="arenaAddress" placeholder="Адрес" required="">
 										<button class="btn btn_blue add-arena-address__btn" type="button">Добавить</button>
 									</div>
 									<div class="error-text">Такого адреса нет на карте вашего города</div>
 								</div>
+							</div>
+
+							<div class="form__items">
+								<div class="form__item-title-wrap">
+									<h3 class="form__item-title form__item-title_chexbox-title upper-case">Стоимость</h3>
+
+
+									<div class="checkbox">
+										<p class="checkbox__text">Бесплатно</p>
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox">
+											<span class="checkbox__switch"></span>
+										</label>
+									</div>
+
+
+								</div>
+
 							</div>
 
 							<div class="form__item">
@@ -537,7 +555,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220511165216"></script>
+	<script src="js/app.min.js?_v=20220512155230"></script>
 </body>
 
 </html>

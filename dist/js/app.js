@@ -7070,129 +7070,106 @@
     }, 0);
     var t = n(755);
     n(688), n(637);
-    t(function () {
+    t(document).ready(function () {
       t("#selectComplex").selectric({
         arrowButtonMarkup:
           '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
         disableOnMobile: !1,
         nativeOnMobile: !1,
-      });
-    }),
-      t(function () {
+      }),
         t("#selectSportType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectOfficial").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectCity").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectMetro").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectTeam").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectTraining").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectSponsor").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectArenaType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectGenderType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectAgeType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectTimeFromType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectTimeToType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectEventType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
-        });
-      }),
-      t(function () {
+        }),
         t("#selectDayType").selectric({
           arrowButtonMarkup:
             '<svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
           disableOnMobile: !1,
           nativeOnMobile: !1,
+        }),
+        t(".form__input_phone").mask("+7 (000) 000 00 00"),
+        t(window).keyup(function (e) {
+          var n = t(".checkbox__label input:focus");
+          9 == e.keyCode && t(n).length && t(n).parent().addClass("focused");
+        }),
+        t(".checkbox__label input").focusout(function () {
+          t(this).parent().removeClass("focused");
         });
-      }),
-      t(function (e) {
-        e(".form__input_phone").mask("+7 (000) 000 00 00");
-      }),
+    }),
       (window.FLS = !0),
       (function (e) {
         let t = new Image();
