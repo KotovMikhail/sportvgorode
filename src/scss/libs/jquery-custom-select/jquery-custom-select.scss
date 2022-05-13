@@ -259,3 +259,40 @@
 .selectric-error .selectric {
 	border-color: $redLightest;		
 }
+
+.select-colors {
+		width: rem(40);
+		height: rem(24);
+		display: block;
+		border-radius: rem(4);
+	
+
+	&.label {
+		font-size: 0;
+	}
+
+	&__red {
+		background-color: $redLighter;
+	}
+
+	&__blue {
+		background-color: $blue;
+	}
+
+	&__green {
+		background-color: $green;
+	}
+
+	&__white {
+		border: 1px solid $primaryLightest2;
+		background-color: $whiteColor;
+	}
+
+	&__violet {	
+		background-color: $violet;
+	}
+
+	&__orange {
+		background-color: $orange;
+	}
+}

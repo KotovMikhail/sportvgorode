@@ -280,9 +280,7 @@
 
 							<div class="form__items">
 								<div class="form__item-title-wrap">
-									<h3 class="form__item-title form__item-title_chexbox-title upper-case">Стоимость</h3>
-									
-	
+									<h3 class="form__item-title form__item-title_chexbox-title upper-case">Стоимость</h3>	
 									<div class="checkbox">
 										<p class="checkbox__text">Бесплатно</p>
 										<label class="checkbox__label">
@@ -290,10 +288,129 @@
 											<span class="checkbox__switch"></span>
 										</label>
 									</div>
-
-
 								</div>
-								
+
+								<div class="form__item form__item-group">
+									<div class="form__item-col form__item-col_left">
+										<div class="add-visit-sum">
+											<p class="add-heading add-visit-sum__heading">Разовое посещение</p>
+											<div class="add-visit-sum__box">
+												<label class="add-visit-sum__currency" for="singleVisit">руб.</label>
+												<input class="form__input form__input_single-sum add-visit-sum__input" type="text" id="singleVisit" name="singleVisit" placeholder="1500" required />
+											</div>
+											<div class="error-text">Укажите сумму</div>
+										</div>
+									</div>
+	
+									<div class="form__item-col form__item-col_right">
+										<div class="add-visit-sum">
+											<p class="add-heading add-visit-sum__heading">Пробное посещение</p>
+											<div class="add-visit-sum__box">
+												<label class="add-visit-sum__currency" for="singleVisit">руб.</label>
+												<input class="form__input form__input_trial-sum add-visit-sum__input" type="text" id="trialVisit" name="trialVisit" placeholder="1000" required />
+											</div>
+											<div class="error-text">Укажите сумму</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+
+							<div class="form__item add-description">
+								<h3 class="form__item-title upper-case">Описание</h3>	
+								<textarea class="form__textarea add-description__textarea _disabled" name="addDescription" id="addDescription" cols="30" rows="3" placeholder="Введите текст..."></textarea>
+								<div class="counter add-description__counter">
+									<span class="counter__inc add-description__counter-inc">0</span><span class="counter__devider add-description__counter-devider">/</span><span class="counter__total add-description__counter-total">100</span>
+								</div>
+							</div>
+
+							<div class="form__item form__item-group">
+								<div class="form__item-col form__item-col_left">
+									<div class="add-level-type">
+										<p class="add-heading add-level-type__heading">Уровень</p>
+										<select id="selectLevelType" class="add-level-type__select">
+											<option value="LevelType1">Любой</option>
+											<option value="LevelType2">Новичок</option>			
+											<option value="LevelType2">Профессиональный</option>			
+										</select>
+										<div class="error-text">Выберите уровень</div>
+									</div>
+								</div>
+
+								<div class="form__item-col form__item-col_right">
+									<div class="add-players-type">
+										<p class="add-heading add-players-type__heading">Количество игроков до</p>
+										<select id="selectPlayersType" class="add-players-type__select">
+											<option value="PlayersType1">26</option>
+											<option value="PlayersType2">25</option>
+											<option value="PlayersType3">24</option>
+											<option value="PlayersType4">23</option>
+											<option value="PlayersType5">22</option>
+											<option value="PlayersType6">21</option>
+											<option value="PlayersType7">20</option>
+											<option value="PlayersType7">19</option>
+											<option value="PlayersType7">18</option>
+											<option value="PlayersType7">17</option>
+											<option value="PlayersType7">16</option>
+											<option value="PlayersType7">15</option>
+											<option value="PlayersType7">14</option>
+											<option value="PlayersType7">13</option>
+											<option value="PlayersType7">12</option>
+										</select>
+										<div class="error-text">Укажите количество игроков</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form__item form__item-group">
+								<div class="form__item-col form__item-col_left">
+									<div class="add-home-color-type">
+										<p class="add-heading add-home-color-type__heading">Цвет домашней формы</p>
+										<select id="selectHomeColorType" class="customOptions add-home-color-type__select">
+											<option value="red">red</option>
+											<option value="blue">blue</option>
+											<option value="green">green</option>
+										</select>
+										<div class="error-text">Выберите цвет домашней формы</div>
+									</div>
+								</div>
+
+								<div class="form__item-col form__item-col_right">
+									<div class="add-guest-color-type">
+										<p class="add-heading add-guest-color-type__heading">Цвет домашней формы</p>
+										<select id="selectGuestColorType" class="customOptions add-guest-color-type__select">
+											<option value="white">white</option>
+											<option value="violet">violet</option>
+											<option value="orange">orange</option>
+										</select>
+										<div class="error-text">Выберите цвет домашней формы</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form__item form__item-group">
+								<div class="form__item-col form__item-col_left">
+									<div class="add-coach-type">
+										<p class="add-heading add-coach-type__heading">Тренер</p>
+										<select id="selectCoachType" class="add-coach-type__select">
+											<option value="CoachType1">Еремин</option>
+											<option value="CoachType2">Еремин2</option>
+											<option value="CoachType2">Тыктынбек</option>
+										</select>
+										<div class="error-text">Выберите тренера </div>
+									</div>
+								</div>
+
+								<div class="form__item-col form__item-col_right">
+									<div class="add-goalkeeper-type">
+										<p class="add-heading add-goalkeeper-type__heading">Вратари</p>
+										<select id="selectGoalkeeperType" class="add-goalkeeper-type__select">
+											<option value="GoalkeeperType1">1</option>
+											<option value="GoalkeeperType2">2</option>
+											<option value="GoalkeeperType3">3</option>
+										</select>
+										<div class="error-text">Выберите вратаря</div>
+									</div>
+								</div>
 							</div>
 						
 							<div class="form__item">

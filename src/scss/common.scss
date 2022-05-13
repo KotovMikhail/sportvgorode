@@ -540,7 +540,7 @@ h4,
 	}
 
 	&__item-title-wrap {
-		margin-bottom: rem(16);
+		margin-bottom: rem(24);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -1485,7 +1485,7 @@ h4,
 		position: relative;
 		user-select: none;
 	}
-	
+
 	&__label .checkbox__switch {
 		display: inline-block;
 		width: 100%;
@@ -1523,28 +1523,26 @@ h4,
 	&__label input[type="checkbox"]:checked + .checkbox__switch:before {
 		transform: translate(24px, -50%);
 	}
-	
+
 	/* Hover */
 	&__label input[type="checkbox"]:not(:disabled):not(:checked):hover + .checkbox__switch {
 		background-color: $primaryLightest;
-		cursor: pointer
+		cursor: pointer;
 	}
 
 	&__label input[type="checkbox"]:not(:disabled):checked:hover + .checkbox__switch {
-			cursor: pointer
+		cursor: pointer;
 	}
-	
+
 	/* Active/Focus */
 	&__label input[type="checkbox"]:not(:disabled):active + .checkbox__switch {
 		background-color: $primaryLightest;
 	}
 
 	&__label.focused .checkbox__switch {
-		outline: 2px solid #FF4FAE;
+		outline: 2px solid #ff4fae;
 	}
 
-
-	
 	&__label input[type="checkbox"]:not(:disabled):checked:active + .checkbox__switch:before,
 	&__label input[type="checkbox"]:not(:disabled):checked:focus + .checkbox__switch:before {
 		animation: checkbox-active-off 0.5s forwards linear;
@@ -1559,7 +1557,6 @@ h4,
 		background-color: $primaryLightest3;
 	}
 
-
 	@include mobileSmall {
 		&__text {
 			margin-right: rem(8);
@@ -1569,4 +1566,26 @@ h4,
 	}
 }
 
+.add-visit-sum {
+	&__box {
+		position: relative;
+	}
 
+	&__input {
+		padding-right: 40px;
+		width: 100%;
+	}
+
+	&__currency {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: rem(8);
+		font-weight: 400;
+		font-size: rem(15);
+		line-height: rem(24);
+		line-height: 24px;
+		color: $primaryLighter;
+		cursor: pointer;
+	}
+}
