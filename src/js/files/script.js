@@ -163,18 +163,18 @@ $(document).ready(function () {
 		disableOnMobile: false,
 		nativeOnMobile: false,
 
-		onInit: function() {		
+		onInit: function () {
 			$('.selectric-add-home-color-type__select .label').addClass('select-colors select-colors__' + $('.selectric-add-home-color-type__select .label').text());
 		},
 
-		onChange: function() {		
+		onChange: function () {
 			$('.selectric-add-home-color-type__select .label').text($(this).val());
 			$('.selectric-add-home-color-type__select .label').removeClass().addClass('label select-colors select-colors__' + $(this).val())
 		},
 
-		optionsItemBuilder: function(itemData, element, index) {
+		optionsItemBuilder: function (itemData, element, index) {
 			//console.log( itemData.value)
-			return element.val().length ? '<span class="select-colors select-colors__' + itemData.value +  '"></span>': itemData.text;
+			return element.val().length ? '<span class="select-colors select-colors__' + itemData.value + '"></span>' : itemData.text;
 		}
 	});
 
@@ -184,18 +184,18 @@ $(document).ready(function () {
 		disableOnMobile: false,
 		nativeOnMobile: false,
 
-		onInit: function() {		
+		onInit: function () {
 			$('.selectric-add-guest-color-type__select .label').addClass('select-colors select-colors__' + $('.selectric-add-guest-color-type__select .label').text());
 		},
 
-		onChange: function() {		
+		onChange: function () {
 			$('.selectric-add-guest-color-type__select .label').text($(this).val());
 			$('.selectric-add-guest-color-type__select .label').removeClass().addClass('label select-colors select-colors__' + $(this).val())
 		},
 
-		optionsItemBuilder: function(itemData, element, index) {
+		optionsItemBuilder: function (itemData, element, index) {
 			//console.log( itemData.value)
-			return element.val().length ? '<span class="select-colors select-colors__' + itemData.value +  '"></span>': itemData.text;
+			return element.val().length ? '<span class="select-colors select-colors__' + itemData.value + '"></span>' : itemData.text;
 		}
 
 
@@ -209,6 +209,7 @@ $(document).ready(function () {
 
 	// Маска для пробного посещения
 	$('.form__input_trial-sum').mask('000 000');
+
 
 	// Убирается фокус для переключателей
 	$(window).keyup(function (e) {

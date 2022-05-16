@@ -246,6 +246,7 @@ h4,
 	&_grey {
 		border: 1px solid $primaryLightest2;
 		background-color: $primaryLightest8;
+		color: $primaryLighter;
 
 		&:hover {
 			border-color: $primaryLightest;
@@ -553,7 +554,7 @@ h4,
 			display: flex;
 			justify-content: space-between;
 
-			.add-time-type__inner {
+			.add-time__inner {
 				display: flex;
 			}
 
@@ -577,12 +578,12 @@ h4,
 			margin-left: rem(24);
 		}
 
-		.add-time-type {
+		.add-time {
 			width: 100%;
 			display: flex;
 			flex-direction: column;
 
-			.add-time-type__heading {
+			.add-time-__heading {
 				width: 100%;
 			}
 		}
@@ -779,7 +780,7 @@ h4,
 	}
 }
 
-.add-time-to-type {
+.add-time-to {
 	.selectric {
 		position: relative;
 
@@ -1010,6 +1011,42 @@ h4,
 			align-items: center;
 
 			.add-arena-address__input {
+				width: 100%;
+				margin-bottom: 16px;
+			}
+		}
+
+		&__btn {
+			width: 100%;
+			margin-left: rem(0);
+			min-height: rem(40);
+		}
+	}
+}
+
+.add-link {
+	&__input {
+		width: 100%;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__btn {
+		margin-left: rem(24);
+		min-height: rem(40);
+	}
+
+	@include mobileSmall {
+		&__box {
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+
+			.add-link__input {
 				width: 100%;
 				margin-bottom: 16px;
 			}
@@ -1587,5 +1624,29 @@ h4,
 		line-height: 24px;
 		color: $primaryLighter;
 		cursor: pointer;
+	}
+}
+
+.add-pre-entry {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__text {
+		margin-right: rem(16);
+		font-weight: $fw-regular;
+		font-size: rem(15);
+		line-height: rem(24);
+	}
+
+	@include mobileSmall {
+		&__text {
+			font-size: rem(14);
+			line-height: rem(20);
+
+			span {
+				display: none;
+			}
+		}
 	}
 }

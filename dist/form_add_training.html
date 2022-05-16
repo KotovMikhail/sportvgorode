@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220513162711">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220516130815">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -191,9 +191,9 @@
 										</select>
 										<div class="error-text">Заполните поле</div>
 									</div>
-									<div class="form__item-sub-col form__item-sub-col_right add-age-type">
-										<p class="add-heading add-age-type__heading">Возраст</p>
-										<select id="selectAgeType" class="add-age-type__select">
+									<div class="form__item-sub-col form__item-sub-col_right add-age">
+										<p class="add-heading add-age__heading">Возраст</p>
+										<select id="selectAgeType" class="add-age__select">
 											<option value="AgeType1">18+</option>
 											<option value="AgeType2">19+</option>
 											<option value="AgeType3">20+</option>
@@ -203,20 +203,19 @@
 								</div>
 
 								<div class="form__item-col form__item-col_right form__item-col_2-cols">
-									<div class="add-time-type">
-										<p class="add-heading add-time-type__heading">Время проведения</p>
-										<div class="add-time-type__inner">
-											<div class="form__item-sub-col form__item-sub-col_left add-time-from-type">
-												<select id="selectTimeFromType" class="add-time-from-type__select error">
+									<div class="add-time">
+										<p class="add-heading add-time__heading">Время проведения</p>
+										<div class="add-time__inner">
+											<div class="form__item-sub-col form__item-sub-col_left add-time-from">
+												<select id="selectTimeFromType" class="add-time-from__select error">
 													<option value="TimeFromType1">00:00</option>
 													<option value="TimeFromType2">01:00</option>
 													<option value="TimeFromType3">02:00</option>
 												</select>
 												<div class="error-text">Укажите время</div>
 											</div>
-											<!--<span class="add-time-type-hyphen">-</span>-->
-											<div class="form__item-sub-col form__item-sub-col_right add-time-to-type">
-												<select id="selectTimeToType" class="add-time-to-type__select">
+											<div class="form__item-sub-col form__item-sub-col_right add-time-to">
+												<select id="selectTimeToType" class="add-time-to__select">
 													<option value="TimeToType1">00:00</option>
 													<option value="TimeToType2">01:00</option>
 													<option value="TimeToType3">02:00</option>
@@ -243,9 +242,9 @@
 								</div>
 
 								<div class="form__item-col form__item-col_right">
-									<div class="add-day-type">
-										<p class="add-heading add-day-type__heading">День недели</p>
-										<select id="selectDayType" class="add-day-type__select">
+									<div class="add-day">
+										<p class="add-heading add-day__heading">День недели</p>
+										<select id="selectDayType" class="add-day__select">
 											<option value="SportType1">Вторник</option>
 											<option value="DayType2">Тип площадки 2</option>
 											<option value="DayType3">Тип площадки 3</option>
@@ -337,9 +336,9 @@
 
 							<div class="form__item form__item-group">
 								<div class="form__item-col form__item-col_left">
-									<div class="add-level-type">
-										<p class="add-heading add-level-type__heading">Уровень</p>
-										<select id="selectLevelType" class="add-level-type__select">
+									<div class="add-level">
+										<p class="add-heading add-level__heading">Уровень</p>
+										<select id="selectLevelType" class="add-level__select">
 											<option value="LevelType1">Любой</option>
 											<option value="LevelType2">Новичок</option>
 											<option value="LevelType2">Профессиональный</option>
@@ -349,9 +348,9 @@
 								</div>
 
 								<div class="form__item-col form__item-col_right">
-									<div class="add-players-type">
-										<p class="add-heading add-players-type__heading">Количество игроков до</p>
-										<select id="selectPlayersType" class="add-players-type__select">
+									<div class="add-players">
+										<p class="add-heading add-players__heading">Количество игроков до</p>
+										<select id="selectPlayersType" class="add-players__select">
 											<option value="PlayersType1">26</option>
 											<option value="PlayersType2">25</option>
 											<option value="PlayersType3">24</option>
@@ -375,9 +374,9 @@
 
 							<div class="form__item form__item-group">
 								<div class="form__item-col form__item-col_left">
-									<div class="add-home-color-type">
-										<p class="add-heading add-home-color-type__heading">Цвет домашней формы</p>
-										<select id="selectHomeColorType" class="customOptions add-home-color-type__select">
+									<div class="add-home-color">
+										<p class="add-heading add-home-color__heading">Цвет домашней формы</p>
+										<select id="selectHomeColorType" class="customOptions add-home-color__select">
 											<option value="red">red</option>
 											<option value="blue">blue</option>
 											<option value="green">green</option>
@@ -387,12 +386,12 @@
 								</div>
 
 								<div class="form__item-col form__item-col_right">
-									<div class="add-guest-color-type">
-										<p class="add-heading add-guest-color-type__heading">Цвет домашней формы</p>
-										<select id="selectGuestColorType" class="customOptions add-guest-color-type__select">
+									<div class="add-guest-color">
+										<p class="add-heading add-guest-color__heading">Цвет домашней формы</p>
+										<select id="selectGuestColorType" class="customOptions add-guest-color__select">
 											<option value="white">white</option>
-											<option value="violet">violet</option>
-											<option value="orange">orange</option>
+											<option value="blue">yellow</option>
+											<option value="green">orange</option>
 										</select>
 										<div class="error-text">Выберите цвет домашней формы</div>
 									</div>
@@ -401,9 +400,9 @@
 
 							<div class="form__item form__item-group">
 								<div class="form__item-col form__item-col_left">
-									<div class="add-coach-type">
-										<p class="add-heading add-coach-type__heading">Тренер</p>
-										<select id="selectCoachType" class="add-coach-type__select">
+									<div class="add-coach">
+										<p class="add-heading add-coach__heading">Тренер</p>
+										<select id="selectCoachType" class="add-coach__select">
 											<option value="CoachType1">Еремин</option>
 											<option value="CoachType2">Еремин2</option>
 											<option value="CoachType2">Тыктынбек</option>
@@ -413,9 +412,9 @@
 								</div>
 
 								<div class="form__item-col form__item-col_right">
-									<div class="add-goalkeeper-type">
-										<p class="add-heading add-goalkeeper-type__heading">Вратари</p>
-										<select id="selectGoalkeeperType" class="add-goalkeeper-type__select">
+									<div class="add-goalkeeper">
+										<p class="add-heading add-goalkeeper__heading">Вратари</p>
+										<select id="selectGoalkeeperType" class="add-goalkeeper__select">
 											<option value="GoalkeeperType1">1</option>
 											<option value="GoalkeeperType2">2</option>
 											<option value="GoalkeeperType3">3</option>
@@ -441,82 +440,6 @@
 								</div>
 							</div>
 
-							<div class="form__item add-official">
-								<p class="add-heading add-official__heading">Вы официальный представитель?</p>
-								<select id="selectOfficial" class="add-official__select">
-									<option value="Yes">Да</option>
-									<option value="No">Нет</option>
-								</select>
-
-							</div>
-
-							<!--<div class="form__item form__item-group form__item-group_city">
-								<div class="form__item-col form__item-col_left">
-									<div class="add-city">
-										<p class="add-heading add-city__heading">Город</p>
-										<select id="selectCity" class="add-city__select">
-											<option value="Moscow">Москва</option>
-											<option value="Sankt-Peterburg">Санкт-Петербург</option>
-											<option value="San-Francisco">Сан-Франциско</option>
-											<option value="Antananirivu">Антананариву</option>
-											<option value="Mariupol">Мариуполь</option>
-										</select>
-										<div class="error-text">Укажите город</div>
-									</div>
-								</div>
-
-								<div class="form__item-col form__item-col_right">
-									<p class="add-heading add-phone__heading">Телефон</p>
-									<div class="form__input-phone-box form__input-phone-box_plus">
-										<input class="form__input form__input_phone error" type="text" name="phone" placeholder="+7 (–––) ––– –– ––" required />
-										<button class="form__input-add-btn form__input-add-btn_plus" type="button"></button>
-									</div>
-
-									<div class="form__input-phone-box form__input-phone-box_minus">
-										<div class="form__input form__input_phone">+7 (925) 838 63 53</div>
-										<button class="form__input-add-btn form__input-add-btn_minus" type="button"></button>
-									</div>
-									<div class="error-text">Укажите телефон</div>
-								</div>
-							</div>-->
-
-							<div class="form__item add-arena-name">
-								<p class="add-heading add-arena-name__heading">Название арены</p>
-								<input class="form__input form__input_arena-name" type="text" name="arenaName" placeholder="Название арены" required />
-								<div class="error-text">Арена с таким названием уже есть на сайте</div>
-							</div>
-
-							<div class="form__item add-arena-address">
-								<p class="add-heading add-arena-address__heading">Адрес</p>
-								<input class="form__input add-arena-address__input" type="text" name="arenaAddress" placeholder="Адрес" required />
-								<div class="error-text">Такого адреса нет на карте вашего города</div>
-							</div>
-
-							<div class="form__item add-metro">
-								<p class="add-heading add-metro__heading">Ближайшее метро</p>
-
-								<select id="selectMetro" class="add-metro__select">
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-								</select>
-								<div class="counter add-metro__counter">
-									<span class="counter__inc add-metro__counter-inc">0</span><span class="counter__devider add-metro__counter-devider">/</span><span class="counter__total add-metro__counter-total">3</span>
-								</div>
-								<div class="add-metro__elem-box">
-									<span class="add-metro__elem">Спортивная</span>
-									<span class="add-metro__elem">Спортивная</span>
-								</div>
-								<div class="error-text">Укажите метро</div>
-
-								<button class="btn btn_blue form__add-btn _disabled" type="button">Добавить</button>
-
-							</div>
-
 							<div class="form__item add-cover">
 								<p class="add-heading add-cover__heading">Обложка</p>
 
@@ -526,119 +449,21 @@
 								</div>
 							</div>
 
-
-							<div class="form__item add-gallery">
-								<p class="add-heading add-gallery__heading">Галерея</p>
-
-
-								<ul class="add-gallery__list">
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image1.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image1.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image1.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image1.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box _acitve">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
-										</div>
-									</li>
-
-									<li class="add-gallery__item">
-										<div class="add-gallery__img-box">
-											<button class="add-gallery__btn" type="button"></button>
-											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
-										</div>
-									</li>
-								</ul>
-								<div class="counter add-gallery__counter">
-									<span class="counter__inc add-gallery__counter-inc">0</span><span class="counter__devider add-gallery__counter-devider">/</span><span class="counter__total add-gallery__counter-total">3</span>
+							<div class="form__item">
+								<div class="add-pre-entry">
+									<p class="add-pre-entry__text">Предварительная запись <span>обязательна</span></p>
+									<div class="checkbox add-pre-entry__checkbox">
+										<label class="checkbox__label">
+											<input class="checkbox__input" type="checkbox">
+											<span class="checkbox__switch"></span>
+										</label>
+									</div>
 								</div>
-
-								<label class="form__files-btn btn btn_grey add-gallery__files-label" for="addGalleryFiles">
-									<span class="form__files-text add-gallery__files-text">Загрузить несколько фотографий</span>
-									<input class="form__files-input add-gallery__files-input visually-hidden" name="addGalleryFiles" id="addGalleryFiles" type="file" accept="image/*,image/jpeg" multiple>
-								</label>
-							</div>
-
-							<div class="form__item add-description">
-								<p class="add-heading add-description__heading">Описание</p>
-
-								<textarea class="form__textarea add-description__textarea _disabled" name="addDescription" id="addDescription" cols="30" rows="3" placeholder="Введите текст..."></textarea>
-
-								<div class="counter add-description__counter">
-									<span class="counter__inc add-description__counter-inc">0</span><span class="counter__devider add-description__counter-devider">/</span><span class="counter__total add-description__counter-total">100</span>
-								</div>
-
 							</div>
 
 						</div>
 						<div class="error-text">Заполните все поля</div>
+
 						<div class="add-description__btns form__btn-wrap">
 							<button class="btn btn_grey form__btn form__btn_cancel" type="reset">Отмена</button>
 							<button class="btn btn_blue form__btn form__btn_submit" type="submit">Опубликовать</button>
@@ -672,7 +497,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220513162711"></script>
+	<script src="js/app.min.js?_v=20220516130815"></script>
 </body>
 
 </html>

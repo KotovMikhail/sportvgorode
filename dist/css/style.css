@@ -660,6 +660,7 @@ h4,
 .btn_grey {
   border: 1px solid #E2E2E2;
   background-color: #FBFBFB;
+  color: #808080;
 }
 .btn_grey:hover {
   border-color: #C4C4C4;
@@ -907,7 +908,7 @@ h4,
   display: flex;
   justify-content: space-between;
 }
-.form__item-col_2-cols .add-time-type__inner {
+.form__item-col_2-cols .add-time__inner {
   display: flex;
 }
 .form__item-col_2-cols .form__item-sub-col {
@@ -922,12 +923,12 @@ h4,
 .form__item-col_right {
   margin-left: 1.5rem;
 }
-.form__item-col .add-time-type {
+.form__item-col .add-time {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.form__item-col .add-time-type .add-time-type__heading {
+.form__item-col .add-time .add-time-__heading {
   width: 100%;
 }
 .form__input-phone-box {
@@ -1085,10 +1086,10 @@ h4,
   }
 }
 
-.add-time-to-type .selectric {
+.add-time-to .selectric {
   position: relative;
 }
-.add-time-to-type .selectric::before {
+.add-time-to .selectric::before {
   content: "-";
   position: absolute;
   top: 50%;
@@ -1274,6 +1275,35 @@ h4,
     margin-bottom: 16px;
   }
   .add-arena-address__btn {
+    width: 100%;
+    margin-left: 0rem;
+    min-height: 2.5rem;
+  }
+}
+
+.add-link__input {
+  width: 100%;
+}
+.add-link__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-link__btn {
+  margin-left: 1.5rem;
+  min-height: 2.5rem;
+}
+@media (max-width: 29.99875em) {
+  .add-link__box {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add-link__box .add-link__input {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .add-link__btn {
     width: 100%;
     margin-left: 0rem;
     min-height: 2.5rem;
@@ -1753,6 +1783,27 @@ h4,
   line-height: 24px;
   color: #808080;
   cursor: pointer;
+}
+
+.add-pre-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-pre-entry__text {
+  margin-right: 1rem;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+}
+@media (max-width: 29.99875em) {
+  .add-pre-entry__text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .add-pre-entry__text span {
+    display: none;
+  }
 }
 
 /*

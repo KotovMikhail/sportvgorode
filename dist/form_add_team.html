@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/_head.htm',{
-"title":"Форма"
-})
+
+<head>
+	<title>Форма</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220516130815">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<h1 style="color: #ffffff;text-align: center;">Header</h1>
+			</div>
+		</header>
 		<main class="page __container">
 
 			<div class="left">
 				<!--<svg class="icon_avatar-empty" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <use xlink:href="@img/icons/icons.svg#avatar-empty"></use>
+                    <use xlink:href="img/icons/icons.svg#avatar-empty"></use>
                 </svg>-->
 
 
@@ -86,48 +98,48 @@
 			<div class="content">
 				<div class="content__inner">
 
+
+
 					<form action="#" class="form content__form" method="POST">
-						<div class="append">
+
+						<div class="append append-team">
 							<div class="append__main">
 								<h2 class="append__title">Добавить</h2>
-								<p class="h2 append__descr">Спортивную арену</p>
+								<p class="h2 append__descr">Команду</p>
 							</div>
-							<div class="append__img">
-								<button class="avatar-add-btn append__avatar" type="button">
-									<span class="avatar-add-btn__text">Загрузить логотип</span>
+							<div class="append__img append-team__img">
+								<button class="avatar-add-btn append__avatar append-team__avatar" type="button">
+									<span class="avatar-add-btn__text append-team__btn-text">Загрузить логотип</span>
 								</button>
-								<!-- <img src="@img/Avatar.png" alt="">
+								<!-- <picture><source srcset="img/Avatar.webp" type="image/webp"><img src="img/Avatar.png" alt=""></picture>
                                 Не совсем ясно, как будет работать установка аватара
                                 Если что, то переделаю, как надо -->
 							</div>
 						</div>
 
 						<div class="form__list">
-							<div class="form__item add-arena">
-								<p class="add-heading add-complex__heading">Выберите тип</p>
-
-								<select id="selectComplex" class="add-complex__select">
-									<option value="SportComplex1">Спортивный комплекс 1</option>
-									<option value="SportComplex2">Спортивный комплекс 2</option>
-									<option value="SportComplex3">Спортивный комплекс 3</option>
-									<option value="SportComplex4">Спортивный комплекс 4</option>
-									<option value="SportComplex5">Спортивный комплекс 5</option>
-									<option value="SportComplex6">Спортивный комплекс 6</option>
-									<option value="SportComplex7">Спортивный комплекс 7</option>
-								</select>
-								<div class="error-text">Укажите тип площадки</div>
+							<div class="form__item add-team-name">
+								<p class="add-heading add-team-name__heading">Название команды</p>
+								<input class="form__input add-team-name__input" type="text" name="teamName" placeholder="Хоккейный клуб «Харламов»" required />
+								<div class="error-text">Команда с таким названием уже существует</div>
 							</div>
 
-							<div class="form__item add-official">
-								<p class="add-heading add-official__heading">Вы официальный представитель?</p>
-								<select id="selectOfficial" class="add-official__select">
-									<option value="Yes">Да</option>
-									<option value="No">Нет</option>
-								</select>
+							<div class="form__item add-sport-type">
+								<p class="add-heading add-sport-type__heading">Вид спорта</p>
 
+								<select id="selectSportType" class="add-sport-type__select">
+									<option value="SportType1">Хоккей</option>
+									<option value="SportType2">Вид спорта 2</option>
+									<option value="SportType3">Вид спорта 3</option>
+									<option value="SportType4">Вид спорта 4</option>
+									<option value="SportType5">Вид спорта 5</option>
+									<option value="SportType6">Вид спорта 6</option>
+									<option value="SportType7">Вид спорта 7</option>
+								</select>
+								<div class="error-text">Укажите вид спорта</div>
 							</div>
 
-							<div class="form__item form__item-group form__item-group_city">
+							<div class="form__item form__item-group">
 								<div class="form__item-col form__item-col_left">
 									<div class="add-city">
 										<p class="add-heading add-city__heading">Город</p>
@@ -155,51 +167,14 @@
 									</div>
 									<div class="error-text">Укажите телефон</div>
 								</div>
-							</div>
-
-							<div class="form__item add-arena-name">
-								<p class="add-heading add-arena-name__heading">Название арены</p>
-								<input class="form__input form__input_arena-name" type="text" name="arenaName" placeholder="Название арены" required />
-								<div class="error-text">Арена с таким названием уже есть на сайте</div>
-							</div>
-
-							<div class="form__item add-arena-address">
-								<p class="add-heading add-arena-address__heading">Адрес</p>
-								<input class="form__input add-arena-address__input" type="text" name="arenaAddress" placeholder="Адрес" required />
-								<div class="error-text">Такого адреса нет на карте вашего города</div>
-							</div>
-
-							<div class="form__item add-metro">
-								<p class="add-heading add-metro__heading">Ближайшее метро</p>
-
-								<select id="selectMetro" class="add-metro__select">
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-									<option value="Sportivnaya">Спортивная</option>
-								</select>
-								<div class="counter add-metro__counter">
-									<span class="counter__inc add-metro__counter-inc">0</span><span class="counter__devider add-metro__counter-devider">/</span><span class="counter__total add-metro__counter-total">3</span>
-								</div>
-								<div class="add-metro__elem-box">
-									<span class="add-metro__elem">Спортивная</span>
-									<span class="add-metro__elem">Спортивная</span>
-								</div>
-								<div class="error-text">Укажите метро</div>
-
-								<button class="btn btn_blue form__add-btn _disabled" type="button">Добавить</button>
 
 							</div>
-
 							<div class="form__item add-cover">
 								<p class="add-heading add-cover__heading">Обложка</p>
 
 								<div class="add-cover__img-box">
 									<button class="add-cover__btn" type="button"></button>
-									<img class="add-cover__img" src="@img/cover.jpg" alt="">
+									<picture><source srcset="img/cover.webp" type="image/webp"><img class="add-cover__img" src="img/cover.jpg" alt=""></picture>
 								</div>
 							</div>
 
@@ -212,84 +187,84 @@
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image1.jpg" alt="">
+											<picture><source srcset="img/gallery/image1.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image1.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image2.jpg" alt="">
+											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image3.jpg" alt="">
+											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image1.jpg" alt="">
+											<picture><source srcset="img/gallery/image1.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image1.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image2.jpg" alt="">
+											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image3.jpg" alt="">
+											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image2.jpg" alt="">
+											<picture><source srcset="img/gallery/image2.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image2.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box _acitve">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image3.jpg" alt="">
+											<picture><source srcset="img/gallery/image3.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image3.jpg" alt=""></picture>
 										</div>
 									</li>
 
 									<li class="add-gallery__item">
 										<div class="add-gallery__img-box">
 											<button class="add-gallery__btn" type="button"></button>
-											<img class="add-gallery__img" src="@img/gallery/image4.jpg" alt="">
+											<picture><source srcset="img/gallery/image4.webp" type="image/webp"><img class="add-gallery__img" src="img/gallery/image4.jpg" alt=""></picture>
 										</div>
 									</li>
 								</ul>
@@ -302,13 +277,21 @@
 									<input class="form__files-input add-gallery__files-input visually-hidden" name="addGalleryFiles" id="addGalleryFiles" type="file" accept="image/*,image/jpeg" multiple>
 								</label>
 							</div>
-
 							<div class="form__item add-description">
 								<p class="add-heading add-description__heading">Описание</p>
 								<textarea class="form__textarea add-description__textarea _disabled" name="addDescription" id="addDescription" cols="30" rows="3" placeholder="Введите текст..."></textarea>
 								<div class="counter add-description__counter">
 									<span class="counter__inc add-description__counter-inc">0</span><span class="counter__devider add-description__counter-devider">/</span><span class="counter__total add-description__counter-total">100</span>
 								</div>
+							</div>
+
+							<div class="form__item add-link">
+								<p class="add-heading add-link__heading">Ссылка на видео</p>
+								<div class="add-link__box">
+									<input class="form__input form__input_link add-link__input" type="text" name="link" placeholder="https://www.youtube.com/watch?" required="">
+									<button class="btn btn_grey add-link__btn" type="button">Добавить</button>
+								</div>
+								<div class="error-text">Такого адреса нет на карте вашего города</div>
 							</div>
 
 						</div>
@@ -328,10 +311,25 @@
 			</div>
 
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+				<h1 style="color: #ffffff; text-align: center;">Footer</h1>
+			</div>
+		</footer>
 	</div>
-	@@include('html/_popup.htm',{})
-	@@include('html/_js.htm',{})
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="js/app.min.js?_v=20220516130815"></script>
 </body>
 
 </html>
